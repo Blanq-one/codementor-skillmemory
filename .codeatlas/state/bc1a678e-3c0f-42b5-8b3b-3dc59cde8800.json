@@ -1,0 +1,1188 @@
+{
+  "repo_id": "bc1a678e-3c0f-42b5-8b3b-3dc59cde8800",
+  "root_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800",
+  "files": [
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\airflow\\daily_etl_dag.py",
+      "language": "python",
+      "size_bytes": 384
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "language": "python",
+      "size_bytes": 6994
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\config\\db_config.py",
+      "language": "python",
+      "size_bytes": 372
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\customer.py",
+      "language": "python",
+      "size_bytes": 318
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\menu_item.py",
+      "language": "python",
+      "size_bytes": 234
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\order.py",
+      "language": "python",
+      "size_bytes": 321
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\dataset_preparer.py",
+      "language": "python",
+      "size_bytes": 2339
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "language": "python",
+      "size_bytes": 1802
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kaggle_downloader.py",
+      "language": "python",
+      "size_bytes": 777
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "language": "python",
+      "size_bytes": 5988
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\sample_data_generator.py",
+      "language": "python",
+      "size_bytes": 8766
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\transformer.py",
+      "language": "python",
+      "size_bytes": 712
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "language": "python",
+      "size_bytes": 1070
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\export_excel.py",
+      "language": "python",
+      "size_bytes": 421
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\sql_views.py",
+      "language": "python",
+      "size_bytes": 466
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "language": "python",
+      "size_bytes": 1369
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "language": "python",
+      "size_bytes": 7179
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "language": "python",
+      "size_bytes": 3527
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "language": "python",
+      "size_bytes": 3542
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\__init__.py",
+      "language": "python",
+      "size_bytes": 0
+    }
+  ],
+  "functions": [
+    {
+      "name": "_csv",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "start_line": 31,
+      "end_line": 35,
+      "signature": "def _csv(base: Path, name: str) -> pd.DataFrame | None:"
+    },
+    {
+      "name": "run_pipeline",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "start_line": 38,
+      "end_line": 171,
+      "signature": "def run_pipeline() -> None:"
+    },
+    {
+      "name": "get_database_url",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\config\\db_config.py",
+      "start_line": 12,
+      "end_line": 14,
+      "signature": "def get_database_url() -> str:"
+    },
+    {
+      "name": "Customer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\customer.py",
+      "start_line": 7,
+      "end_line": 13,
+      "signature": "class Customer:"
+    },
+    {
+      "name": "MenuItem",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\menu_item.py",
+      "start_line": 6,
+      "end_line": 11,
+      "signature": "class MenuItem:"
+    },
+    {
+      "name": "Order",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\order.py",
+      "start_line": 7,
+      "end_line": 13,
+      "signature": "class Order:"
+    },
+    {
+      "name": "_snake_case",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\dataset_preparer.py",
+      "start_line": 9,
+      "end_line": 16,
+      "signature": "def _snake_case(value: str) -> str:"
+    },
+    {
+      "name": "RestaurantDatasetPreparer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\dataset_preparer.py",
+      "start_line": 20,
+      "end_line": 69,
+      "signature": "class RestaurantDatasetPreparer:"
+    },
+    {
+      "name": "prepare",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\dataset_preparer.py",
+      "start_line": 24,
+      "end_line": 69,
+      "signature": "def prepare(self) -> None:"
+    },
+    {
+      "name": "DataRepository",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 11,
+      "end_line": 19,
+      "signature": "class DataRepository(Protocol):"
+    },
+    {
+      "name": "load_dataframe",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 12,
+      "end_line": 13,
+      "signature": "def load_dataframe(self, table_name: str, df: pd.DataFrame) -> None:"
+    },
+    {
+      "name": "fetch_dataframe",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 15,
+      "end_line": 16,
+      "signature": "def fetch_dataframe(self, query: str) -> pd.DataFrame:"
+    },
+    {
+      "name": "execute_sql",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 18,
+      "end_line": 19,
+      "signature": "def execute_sql(self, statement: str) -> None:"
+    },
+    {
+      "name": "SqlAlchemyRepository",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 23,
+      "end_line": 49,
+      "signature": "class SqlAlchemyRepository(DataRepository):"
+    },
+    {
+      "name": "_engine",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 26,
+      "end_line": 27,
+      "signature": "def _engine(self) -> Engine:"
+    },
+    {
+      "name": "load_dataframe",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 29,
+      "end_line": 39,
+      "signature": "def load_dataframe(self, table_name: str, df: pd.DataFrame) -> None:"
+    },
+    {
+      "name": "fetch_dataframe",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 41,
+      "end_line": 43,
+      "signature": "def fetch_dataframe(self, query: str) -> pd.DataFrame:"
+    },
+    {
+      "name": "execute_sql",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 45,
+      "end_line": 49,
+      "signature": "def execute_sql(self, statement: str) -> None:"
+    },
+    {
+      "name": "load_csvs",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "start_line": 52,
+      "end_line": 55,
+      "signature": "def load_csvs(repository: DataRepository, csv_table_map: Iterable[tuple[str, str]]) -> None:"
+    },
+    {
+      "name": "KaggleDatasetDownloader",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kaggle_downloader.py",
+      "start_line": 10,
+      "end_line": 24,
+      "signature": "class KaggleDatasetDownloader:"
+    },
+    {
+      "name": "download_and_place",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kaggle_downloader.py",
+      "start_line": 14,
+      "end_line": 24,
+      "signature": "def download_and_place(self) -> Path:"
+    },
+    {
+      "name": "KPIBase",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 9,
+      "end_line": 13,
+      "signature": "class KPIBase(Protocol):"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 12,
+      "end_line": 13,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "DailyRevenueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 19,
+      "end_line": 30,
+      "signature": "class DailyRevenueKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 22,
+      "end_line": 30,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "WeeklyRevenueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 34,
+      "end_line": 45,
+      "signature": "class WeeklyRevenueKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 37,
+      "end_line": 45,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "MonthlyRevenueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 49,
+      "end_line": 59,
+      "signature": "class MonthlyRevenueKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 52,
+      "end_line": 59,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "AverageOrderValueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 65,
+      "end_line": 72,
+      "signature": "class AverageOrderValueKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 68,
+      "end_line": 72,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "OrdersPerDayKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 76,
+      "end_line": 86,
+      "signature": "class OrdersPerDayKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 79,
+      "end_line": 86,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "RevenuePerHourKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 92,
+      "end_line": 102,
+      "signature": "class RevenuePerHourKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 95,
+      "end_line": 102,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "PeakHoursKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 106,
+      "end_line": 118,
+      "signature": "class PeakHoursKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 109,
+      "end_line": 118,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "WeekdayVsWeekendKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 122,
+      "end_line": 136,
+      "signature": "class WeekdayVsWeekendKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 125,
+      "end_line": 136,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "TopMenuItemsKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 142,
+      "end_line": 155,
+      "signature": "class TopMenuItemsKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 145,
+      "end_line": 155,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "RevenueByCategoryKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 159,
+      "end_line": 172,
+      "signature": "class RevenueByCategoryKPI:"
+    },
+    {
+      "name": "calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 162,
+      "end_line": 172,
+      "signature": "def calculate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "run_kpi",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "start_line": 177,
+      "end_line": 178,
+      "signature": "def run_kpi(kpi: KPIBase, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "_random_timestamp",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\sample_data_generator.py",
+      "start_line": 71,
+      "end_line": 83,
+      "signature": "def _random_timestamp(date: datetime) -> datetime:"
+    },
+    {
+      "name": "generate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\sample_data_generator.py",
+      "start_line": 86,
+      "end_line": 205,
+      "signature": "def generate(output_dir: Path, num_customers: int = 200, num_orders: int = 5000) -> None:"
+    },
+    {
+      "name": "TimestampNormalizer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\transformer.py",
+      "start_line": 10,
+      "end_line": 18,
+      "signature": "class TimestampNormalizer:"
+    },
+    {
+      "name": "transform",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\transformer.py",
+      "start_line": 13,
+      "end_line": 18,
+      "signature": "def transform(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "Deduplicator",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\transformer.py",
+      "start_line": 22,
+      "end_line": 26,
+      "signature": "class Deduplicator:"
+    },
+    {
+      "name": "transform",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\transformer.py",
+      "start_line": 25,
+      "end_line": 26,
+      "signature": "def transform(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "Validator",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "start_line": 9,
+      "end_line": 11,
+      "signature": "class Validator(Protocol):"
+    },
+    {
+      "name": "validate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "start_line": 10,
+      "end_line": 11,
+      "signature": "def validate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "OrderValidator",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "start_line": 15,
+      "end_line": 22,
+      "signature": "class OrderValidator:"
+    },
+    {
+      "name": "validate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "start_line": 18,
+      "end_line": 22,
+      "signature": "def validate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "MenuItemValidator",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "start_line": 26,
+      "end_line": 33,
+      "signature": "class MenuItemValidator:"
+    },
+    {
+      "name": "validate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "start_line": 29,
+      "end_line": 33,
+      "signature": "def validate(self, df: pd.DataFrame) -> pd.DataFrame:"
+    },
+    {
+      "name": "export_to_excel",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\export_excel.py",
+      "start_line": 7,
+      "end_line": 11,
+      "signature": "def export_to_excel(output_path: Path, sheets: dict[str, pd.DataFrame]) -> None:"
+    },
+    {
+      "name": "apply_sql_file",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\sql_views.py",
+      "start_line": 7,
+      "end_line": 9,
+      "signature": "def apply_sql_file(repository: DataRepository, sql_path: Path) -> None:"
+    },
+    {
+      "name": "apply_all_views",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\sql_views.py",
+      "start_line": 12,
+      "end_line": 15,
+      "signature": "def apply_all_views(repository: DataRepository) -> None:"
+    },
+    {
+      "name": "TestExportExcel",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "start_line": 8,
+      "end_line": 38,
+      "signature": "class TestExportExcel:"
+    },
+    {
+      "name": "test_creates_file",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "start_line": 10,
+      "end_line": 14,
+      "signature": "def test_creates_file(self, tmp_path):"
+    },
+    {
+      "name": "test_multiple_sheets",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "start_line": 16,
+      "end_line": 24,
+      "signature": "def test_multiple_sheets(self, tmp_path):"
+    },
+    {
+      "name": "test_long_sheet_name_truncated",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "start_line": 26,
+      "end_line": 32,
+      "signature": "def test_long_sheet_name_truncated(self, tmp_path):"
+    },
+    {
+      "name": "test_creates_parent_directories",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "start_line": 34,
+      "end_line": 38,
+      "signature": "def test_creates_parent_directories(self, tmp_path):"
+    },
+    {
+      "name": "sample_detail",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 22,
+      "end_line": 39,
+      "signature": "def sample_detail():"
+    },
+    {
+      "name": "TestDailyRevenueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 44,
+      "end_line": 57,
+      "signature": "class TestDailyRevenueKPI:"
+    },
+    {
+      "name": "test_correct_daily_totals",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 46,
+      "end_line": 49,
+      "signature": "def test_correct_daily_totals(self, sample_detail):"
+    },
+    {
+      "name": "test_missing_columns_raises",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 51,
+      "end_line": 54,
+      "signature": "def test_missing_columns_raises(self):"
+    },
+    {
+      "name": "test_name_attribute",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 56,
+      "end_line": 57,
+      "signature": "def test_name_attribute(self):"
+    },
+    {
+      "name": "TestWeeklyRevenueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 62,
+      "end_line": 68,
+      "signature": "class TestWeeklyRevenueKPI:"
+    },
+    {
+      "name": "test_aggregates_by_week",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 64,
+      "end_line": 68,
+      "signature": "def test_aggregates_by_week(self, sample_detail):"
+    },
+    {
+      "name": "TestMonthlyRevenueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 73,
+      "end_line": 78,
+      "signature": "class TestMonthlyRevenueKPI:"
+    },
+    {
+      "name": "test_aggregates_by_month",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 75,
+      "end_line": 78,
+      "signature": "def test_aggregates_by_month(self, sample_detail):"
+    },
+    {
+      "name": "TestAverageOrderValueKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 83,
+      "end_line": 95,
+      "signature": "class TestAverageOrderValueKPI:"
+    },
+    {
+      "name": "test_correct_aov",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 85,
+      "end_line": 90,
+      "signature": "def test_correct_aov(self, sample_detail):"
+    },
+    {
+      "name": "test_missing_columns_raises",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 92,
+      "end_line": 95,
+      "signature": "def test_missing_columns_raises(self):"
+    },
+    {
+      "name": "TestOrdersPerDayKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 100,
+      "end_line": 105,
+      "signature": "class TestOrdersPerDayKPI:"
+    },
+    {
+      "name": "test_correct_counts",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 102,
+      "end_line": 105,
+      "signature": "def test_correct_counts(self, sample_detail):"
+    },
+    {
+      "name": "TestRevenuePerHourKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 110,
+      "end_line": 118,
+      "signature": "class TestRevenuePerHourKPI:"
+    },
+    {
+      "name": "test_groups_by_hour",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 112,
+      "end_line": 118,
+      "signature": "def test_groups_by_hour(self, sample_detail):"
+    },
+    {
+      "name": "TestPeakHoursKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 123,
+      "end_line": 128,
+      "signature": "class TestPeakHoursKPI:"
+    },
+    {
+      "name": "test_sorted_descending",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 125,
+      "end_line": 128,
+      "signature": "def test_sorted_descending(self, sample_detail):"
+    },
+    {
+      "name": "TestWeekdayVsWeekendKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 133,
+      "end_line": 141,
+      "signature": "class TestWeekdayVsWeekendKPI:"
+    },
+    {
+      "name": "test_weekday_weekend_split",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 135,
+      "end_line": 141,
+      "signature": "def test_weekday_weekend_split(self, sample_detail):"
+    },
+    {
+      "name": "TestTopMenuItemsKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 146,
+      "end_line": 156,
+      "signature": "class TestTopMenuItemsKPI:"
+    },
+    {
+      "name": "test_sorted_by_revenue",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 148,
+      "end_line": 151,
+      "signature": "def test_sorted_by_revenue(self, sample_detail):"
+    },
+    {
+      "name": "test_missing_column_raises",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 153,
+      "end_line": 156,
+      "signature": "def test_missing_column_raises(self):"
+    },
+    {
+      "name": "TestRevenueByCategoryKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 161,
+      "end_line": 171,
+      "signature": "class TestRevenueByCategoryKPI:"
+    },
+    {
+      "name": "test_groups_by_category",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 163,
+      "end_line": 166,
+      "signature": "def test_groups_by_category(self, sample_detail):"
+    },
+    {
+      "name": "test_missing_column_raises",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 168,
+      "end_line": 171,
+      "signature": "def test_missing_column_raises(self):"
+    },
+    {
+      "name": "TestRunKPI",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 176,
+      "end_line": 180,
+      "signature": "class TestRunKPI:"
+    },
+    {
+      "name": "test_delegates_to_calculate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "start_line": 178,
+      "end_line": 180,
+      "signature": "def test_delegates_to_calculate(self, sample_detail):"
+    },
+    {
+      "name": "TestTimestampNormalizer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 10,
+      "end_line": 45,
+      "signature": "class TestTimestampNormalizer:"
+    },
+    {
+      "name": "test_converts_string_to_datetime",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 12,
+      "end_line": 15,
+      "signature": "def test_converts_string_to_datetime(self):"
+    },
+    {
+      "name": "test_invalid_timestamps_become_nat",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 17,
+      "end_line": 20,
+      "signature": "def test_invalid_timestamps_become_nat(self):"
+    },
+    {
+      "name": "test_column_not_present_is_skipped",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 22,
+      "end_line": 26,
+      "signature": "def test_column_not_present_is_skipped(self):"
+    },
+    {
+      "name": "test_multiple_columns",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 28,
+      "end_line": 35,
+      "signature": "def test_multiple_columns(self):"
+    },
+    {
+      "name": "test_returns_copy",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 37,
+      "end_line": 40,
+      "signature": "def test_returns_copy(self):"
+    },
+    {
+      "name": "test_empty_dataframe",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 42,
+      "end_line": 45,
+      "signature": "def test_empty_dataframe(self):"
+    },
+    {
+      "name": "TestDeduplicator",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 50,
+      "end_line": 84,
+      "signature": "class TestDeduplicator:"
+    },
+    {
+      "name": "test_removes_duplicates",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 52,
+      "end_line": 55,
+      "signature": "def test_removes_duplicates(self):"
+    },
+    {
+      "name": "test_no_duplicates_unchanged",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 57,
+      "end_line": 60,
+      "signature": "def test_no_duplicates_unchanged(self):"
+    },
+    {
+      "name": "test_all_duplicates",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 62,
+      "end_line": 65,
+      "signature": "def test_all_duplicates(self):"
+    },
+    {
+      "name": "test_multiple_subset_columns",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 67,
+      "end_line": 74,
+      "signature": "def test_multiple_subset_columns(self):"
+    },
+    {
+      "name": "test_returns_copy",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 76,
+      "end_line": 79,
+      "signature": "def test_returns_copy(self):"
+    },
+    {
+      "name": "test_empty_dataframe",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "start_line": 81,
+      "end_line": 84,
+      "signature": "def test_empty_dataframe(self):"
+    },
+    {
+      "name": "TestOrderValidator",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 10,
+      "end_line": 63,
+      "signature": "class TestOrderValidator:"
+    },
+    {
+      "name": "test_valid_orders_pass",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 12,
+      "end_line": 18,
+      "signature": "def test_valid_orders_pass(self):"
+    },
+    {
+      "name": "test_null_timestamps_dropped",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 20,
+      "end_line": 27,
+      "signature": "def test_null_timestamps_dropped(self):"
+    },
+    {
+      "name": "test_all_null_timestamps",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 29,
+      "end_line": 35,
+      "signature": "def test_all_null_timestamps(self):"
+    },
+    {
+      "name": "test_missing_required_column_raises",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 37,
+      "end_line": 40,
+      "signature": "def test_missing_required_column_raises(self):"
+    },
+    {
+      "name": "test_empty_dataframe",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 42,
+      "end_line": 45,
+      "signature": "def test_empty_dataframe(self):"
+    },
+    {
+      "name": "test_extra_columns_preserved",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 47,
+      "end_line": 54,
+      "signature": "def test_extra_columns_preserved(self):"
+    },
+    {
+      "name": "test_returns_copy_not_view",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 56,
+      "end_line": 63,
+      "signature": "def test_returns_copy_not_view(self):"
+    },
+    {
+      "name": "TestMenuItemValidator",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 68,
+      "end_line": 100,
+      "signature": "class TestMenuItemValidator:"
+    },
+    {
+      "name": "test_valid_items_pass",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 70,
+      "end_line": 77,
+      "signature": "def test_valid_items_pass(self):"
+    },
+    {
+      "name": "test_null_name_dropped",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 79,
+      "end_line": 86,
+      "signature": "def test_null_name_dropped(self):"
+    },
+    {
+      "name": "test_null_price_dropped",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 88,
+      "end_line": 95,
+      "signature": "def test_null_price_dropped(self):"
+    },
+    {
+      "name": "test_missing_column_raises",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "start_line": 97,
+      "end_line": 100,
+      "signature": "def test_missing_column_raises(self):"
+    }
+  ],
+  "edges": [
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\airflow\\daily_etl_dag.py",
+      "target": "airflow",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\airflow\\daily_etl_dag.py",
+      "target": "airflow.operators.bash",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\airflow\\daily_etl_dag.py",
+      "target": "datetime",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "target": "src.config.db_config",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "target": "src.services.data_loader",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "target": "src.services.kpi_calculator",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "target": "src.services.transformer",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "target": "src.services.validator",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\pipeline.py",
+      "target": "src.views.export_excel",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\config\\db_config.py",
+      "target": "dotenv",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\config\\db_config.py",
+      "target": "os",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\config\\db_config.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\customer.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\customer.py",
+      "target": "datetime",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\customer.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\menu_item.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\menu_item.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\order.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\order.py",
+      "target": "datetime",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\models\\order.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\dataset_preparer.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\dataset_preparer.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "target": "sqlalchemy",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "target": "sqlalchemy.engine",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\data_loader.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kaggle_downloader.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kaggle_downloader.py",
+      "target": "kagglehub",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kaggle_downloader.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\kpi_calculator.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\sample_data_generator.py",
+      "target": "datetime",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\sample_data_generator.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\sample_data_generator.py",
+      "target": "random",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\transformer.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\transformer.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\services\\validator.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\export_excel.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\sql_views.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\src\\views\\sql_views.py",
+      "target": "src.services.data_loader",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_export_excel.py",
+      "target": "src.views.export_excel",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "target": "pytest",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_kpi_calculator.py",
+      "target": "src.services.kpi_calculator",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_transformer.py",
+      "target": "src.services.transformer",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "target": "pytest",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\bc1a678e-3c0f-42b5-8b3b-3dc59cde8800\\tests\\test_validator.py",
+      "target": "src.services.validator",
+      "relation": "imports"
+    }
+  ]
+}

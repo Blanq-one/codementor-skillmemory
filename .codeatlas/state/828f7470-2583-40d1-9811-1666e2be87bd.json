@@ -1,0 +1,1689 @@
+{
+  "repo_id": "828f7470-2583-40d1-9811-1666e2be87bd",
+  "files": [
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\__init__.py",
+      "language": "python",
+      "size_bytes": 335
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "language": "python",
+      "size_bytes": 923
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\__init__.py",
+      "language": "python",
+      "size_bytes": 134
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "language": "python",
+      "size_bytes": 2394
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "language": "python",
+      "size_bytes": 2682
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "language": "python",
+      "size_bytes": 2119
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\__init__.py",
+      "language": "python",
+      "size_bytes": 306
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "language": "python",
+      "size_bytes": 2307
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "language": "python",
+      "size_bytes": 1374
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\__init__.py",
+      "language": "python",
+      "size_bytes": 282
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "language": "python",
+      "size_bytes": 2095
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "language": "python",
+      "size_bytes": 3015
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\__init__.py",
+      "language": "python",
+      "size_bytes": 227
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "language": "python",
+      "size_bytes": 4530
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "language": "python",
+      "size_bytes": 2700
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "language": "python",
+      "size_bytes": 4204
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\__init__.py",
+      "language": "python",
+      "size_bytes": 266
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\logger.py",
+      "language": "python",
+      "size_bytes": 472
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\metrics.py",
+      "language": "python",
+      "size_bytes": 586
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "language": "python",
+      "size_bytes": 785
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\__init__.py",
+      "language": "python",
+      "size_bytes": 233
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "language": "python",
+      "size_bytes": 2276
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\reports.py",
+      "language": "python",
+      "size_bytes": 743
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "language": "python",
+      "size_bytes": 21438
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\postcss.config.js",
+      "language": "javascript",
+      "size_bytes": 89
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\tailwind.config.js",
+      "language": "javascript",
+      "size_bytes": 752
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\vite.config.ts",
+      "language": "javascript",
+      "size_bytes": 317
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "language": "javascript",
+      "size_bytes": 22076
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\main.tsx",
+      "language": "javascript",
+      "size_bytes": 262
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\AnimatedBadge.tsx",
+      "language": "javascript",
+      "size_bytes": 995
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\ConfidenceGauge.tsx",
+      "language": "javascript",
+      "size_bytes": 2146
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\conftest.py",
+      "language": "python",
+      "size_bytes": 288
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_inference.py",
+      "language": "python",
+      "size_bytes": 415
+    },
+    {
+      "path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_transforms.py",
+      "language": "python",
+      "size_bytes": 435
+    }
+  ],
+  "functions": [
+    {
+      "name": "get_version",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\__init__.py",
+      "start_line": 8,
+      "end_line": 15,
+      "signature": "def get_version() -> str:"
+    },
+    {
+      "name": "DataSection",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "start_line": 14,
+      "end_line": 17,
+      "signature": "class DataSection:"
+    },
+    {
+      "name": "TrainingSection",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "start_line": 21,
+      "end_line": 25,
+      "signature": "class TrainingSection:"
+    },
+    {
+      "name": "AppConfig",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "start_line": 29,
+      "end_line": 32,
+      "signature": "class AppConfig:"
+    },
+    {
+      "name": "load_config",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "start_line": 35,
+      "end_line": 46,
+      "signature": "def load_config(path: Path = Path(\"app/config/config.yaml\")) -> AppConfig:"
+    },
+    {
+      "name": "EvaluationController",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "start_line": 20,
+      "end_line": 63,
+      "signature": "class EvaluationController:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "start_line": 25,
+      "end_line": 26,
+      "signature": "def __init__(self, config: AppConfig) -> None:"
+    },
+    {
+      "name": "run",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "start_line": 28,
+      "end_line": 63,
+      "signature": "def run(self) -> None:"
+    },
+    {
+      "name": "main",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "start_line": 66,
+      "end_line": 69,
+      "signature": "def main() -> None:"
+    },
+    {
+      "name": "InferenceController",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "start_line": 21,
+      "end_line": 64,
+      "signature": "class InferenceController:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "start_line": 26,
+      "end_line": 35,
+      "signature": "def __init__(self, checkpoint_path: Path | None = None) -> None:"
+    },
+    {
+      "name": "predict",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "start_line": 37,
+      "end_line": 48,
+      "signature": "def predict(self, image_tensor: torch.Tensor) -> Dict[str, object]:"
+    },
+    {
+      "name": "_predict_with_probs",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "start_line": 50,
+      "end_line": 56,
+      "signature": "def _predict_with_probs(self, image_tensor: torch.Tensor) -> Tuple[int, float, Dict[str, float]]:"
+    },
+    {
+      "name": "predict_from_path",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "start_line": 58,
+      "end_line": 60,
+      "signature": "def predict_from_path(self, image_path: Path) -> Dict[str, object]:"
+    },
+    {
+      "name": "predict_from_pil",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "start_line": 62,
+      "end_line": 64,
+      "signature": "def predict_from_pil(self, image: Image.Image) -> Dict[str, object]:"
+    },
+    {
+      "name": "TrainingController",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "start_line": 20,
+      "end_line": 60,
+      "signature": "class TrainingController:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "start_line": 25,
+      "end_line": 26,
+      "signature": "def __init__(self, config: AppConfig) -> None:"
+    },
+    {
+      "name": "run",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "start_line": 28,
+      "end_line": 60,
+      "signature": "def run(self) -> None:"
+    },
+    {
+      "name": "main",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "start_line": 63,
+      "end_line": 66,
+      "signature": "def main() -> None:"
+    },
+    {
+      "name": "DataConfig",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "start_line": 17,
+      "end_line": 26,
+      "signature": "class DataConfig:"
+    },
+    {
+      "name": "ChestXRayDatasetFactory",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "start_line": 29,
+      "end_line": 52,
+      "signature": "class ChestXRayDatasetFactory:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "start_line": 34,
+      "end_line": 42,
+      "signature": "def __init__("
+    },
+    {
+      "name": "get_dataset",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "start_line": 44,
+      "end_line": 52,
+      "signature": "def get_dataset(self, split: str) -> Dataset:"
+    },
+    {
+      "name": "_collate_batch",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "start_line": 55,
+      "end_line": 59,
+      "signature": "def _collate_batch(batch):"
+    },
+    {
+      "name": "create_dataloaders",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "start_line": 62,
+      "end_line": 83,
+      "signature": "def create_dataloaders("
+    },
+    {
+      "name": "AlbumentationsTransform",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "start_line": 21,
+      "end_line": 32,
+      "signature": "class AlbumentationsTransform:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "start_line": 26,
+      "end_line": 27,
+      "signature": "def __init__(self, transforms):"
+    },
+    {
+      "name": "__call__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "start_line": 29,
+      "end_line": 32,
+      "signature": "def __call__(self, image):"
+    },
+    {
+      "name": "build_transforms",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "start_line": 35,
+      "end_line": 55,
+      "signature": "def build_transforms(split: str) -> Callable:"
+    },
+    {
+      "name": "IImagePreprocessor",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 14,
+      "end_line": 20,
+      "signature": "class IImagePreprocessor(Protocol):"
+    },
+    {
+      "name": "__call__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 19,
+      "end_line": 20,
+      "signature": "def __call__(self, image_path: Path) -> torch.Tensor:"
+    },
+    {
+      "name": "IExplainabilityEngine",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 23,
+      "end_line": 29,
+      "signature": "class IExplainabilityEngine(Protocol):"
+    },
+    {
+      "name": "explain",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 28,
+      "end_line": 29,
+      "signature": "def explain(self, input_tensor: torch.Tensor, class_idx: int) -> Any:"
+    },
+    {
+      "name": "IExplainableClassifier",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 32,
+      "end_line": 88,
+      "signature": "class IExplainableClassifier(ABC):"
+    },
+    {
+      "name": "load",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 38,
+      "end_line": 41,
+      "signature": "def load(self, checkpoint_path: Path) -> None:"
+    },
+    {
+      "name": "save",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 44,
+      "end_line": 47,
+      "signature": "def save(self, checkpoint_path: Path) -> None:"
+    },
+    {
+      "name": "predict",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 50,
+      "end_line": 53,
+      "signature": "def predict(self, input_tensor: torch.Tensor) -> Tuple[int, float]:"
+    },
+    {
+      "name": "to_device",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 56,
+      "end_line": 59,
+      "signature": "def to_device(self, device: torch.device) -> None:"
+    },
+    {
+      "name": "eval_mode",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 62,
+      "end_line": 65,
+      "signature": "def eval_mode(self) -> None:"
+    },
+    {
+      "name": "train_mode",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 68,
+      "end_line": 71,
+      "signature": "def train_mode(self) -> None:"
+    },
+    {
+      "name": "forward",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 74,
+      "end_line": 77,
+      "signature": "def forward(self, batch: Dict[str, torch.Tensor]) -> Dict[str, torch.Tensor]:"
+    },
+    {
+      "name": "explain",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "start_line": 80,
+      "end_line": 88,
+      "signature": "def explain("
+    },
+    {
+      "name": "ResNetPneumoniaClassifier",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 17,
+      "end_line": 82,
+      "signature": "class ResNetPneumoniaClassifier(IExplainableClassifier):"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 22,
+      "end_line": 34,
+      "signature": "def __init__(self, num_classes: int = 2, dropout: float = 0.3, pretrained: bool = True) -> None:"
+    },
+    {
+      "name": "load",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 36,
+      "end_line": 38,
+      "signature": "def load(self, checkpoint_path: Path) -> None:"
+    },
+    {
+      "name": "save",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 40,
+      "end_line": 42,
+      "signature": "def save(self, checkpoint_path: Path) -> None:"
+    },
+    {
+      "name": "predict",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 44,
+      "end_line": 50,
+      "signature": "def predict(self, input_tensor: torch.Tensor) -> Tuple[int, float]:"
+    },
+    {
+      "name": "to_device",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 52,
+      "end_line": 54,
+      "signature": "def to_device(self, device: torch.device) -> None:"
+    },
+    {
+      "name": "eval_mode",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 56,
+      "end_line": 57,
+      "signature": "def eval_mode(self) -> None:"
+    },
+    {
+      "name": "train_mode",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 59,
+      "end_line": 60,
+      "signature": "def train_mode(self) -> None:"
+    },
+    {
+      "name": "forward",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 62,
+      "end_line": 67,
+      "signature": "def forward(self, batch: Dict[str, torch.Tensor]) -> Dict[str, torch.Tensor]:"
+    },
+    {
+      "name": "explain",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "start_line": 69,
+      "end_line": 82,
+      "signature": "def explain("
+    },
+    {
+      "name": "EvaluationArtifacts",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "start_line": 34,
+      "end_line": 40,
+      "signature": "class EvaluationArtifacts:"
+    },
+    {
+      "name": "EvaluationService",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "start_line": 43,
+      "end_line": 134,
+      "signature": "class EvaluationService:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "start_line": 48,
+      "end_line": 60,
+      "signature": "def __init__("
+    },
+    {
+      "name": "evaluate",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "start_line": 62,
+      "end_line": 97,
+      "signature": "def evaluate(self) -> EvaluationArtifacts:"
+    },
+    {
+      "name": "_plot_confusion_matrix",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "start_line": 99,
+      "end_line": 106,
+      "signature": "def _plot_confusion_matrix(self, y_true, y_pred) -> Path:"
+    },
+    {
+      "name": "_plot_roc",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "start_line": 108,
+      "end_line": 121,
+      "signature": "def _plot_roc(self, y_true, y_scores) -> Path:"
+    },
+    {
+      "name": "_plot_pr",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "start_line": 123,
+      "end_line": 134,
+      "signature": "def _plot_pr(self, y_true, y_scores) -> Path:"
+    },
+    {
+      "name": "GradCamConfig",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "start_line": 27,
+      "end_line": 29,
+      "signature": "class GradCamConfig:"
+    },
+    {
+      "name": "GradCamArtifact",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "start_line": 33,
+      "end_line": 39,
+      "signature": "class GradCamArtifact:"
+    },
+    {
+      "name": "GradCamService",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "start_line": 42,
+      "end_line": 81,
+      "signature": "class GradCamService(IExplainabilityEngine):"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "start_line": 47,
+      "end_line": 51,
+      "signature": "def __init__(self, model: IExplainableClassifier, config: GradCamConfig) -> None:"
+    },
+    {
+      "name": "explain",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "start_line": 53,
+      "end_line": 75,
+      "signature": "def explain(self, input_tensor: torch.Tensor, class_idx: int) -> GradCamArtifact:"
+    },
+    {
+      "name": "_resolve_target_layer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "start_line": 77,
+      "end_line": 81,
+      "signature": "def _resolve_target_layer(self):"
+    },
+    {
+      "name": "OptimizerConfig",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "start_line": 24,
+      "end_line": 26,
+      "signature": "class OptimizerConfig:"
+    },
+    {
+      "name": "TrainerConfig",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "start_line": 30,
+      "end_line": 34,
+      "signature": "class TrainerConfig:"
+    },
+    {
+      "name": "Trainer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "start_line": 37,
+      "end_line": 125,
+      "signature": "class Trainer:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "start_line": 42,
+      "end_line": 62,
+      "signature": "def __init__("
+    },
+    {
+      "name": "fit",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "start_line": 64,
+      "end_line": 87,
+      "signature": "def fit(self) -> Dict[str, float]:"
+    },
+    {
+      "name": "_run_epoch",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "start_line": 89,
+      "end_line": 125,
+      "signature": "def _run_epoch(self, loader: DataLoader, train: bool) -> Dict[str, float]:"
+    },
+    {
+      "name": "get_logger",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\logger.py",
+      "start_line": 14,
+      "end_line": 21,
+      "signature": "def get_logger(name: str) -> Logger:"
+    },
+    {
+      "name": "MetricsTracker",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\metrics.py",
+      "start_line": 11,
+      "end_line": 23,
+      "signature": "class MetricsTracker:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\metrics.py",
+      "start_line": 16,
+      "end_line": 17,
+      "signature": "def __init__(self) -> None:"
+    },
+    {
+      "name": "log",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\metrics.py",
+      "start_line": 19,
+      "end_line": 20,
+      "signature": "def log(self, split: str, metrics: Dict[str, float]) -> None:"
+    },
+    {
+      "name": "history",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\metrics.py",
+      "start_line": 22,
+      "end_line": 23,
+      "signature": "def history(self, split: str) -> List[Dict[str, float]]:"
+    },
+    {
+      "name": "ImagePreprocessor",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "start_line": 16,
+      "end_line": 31,
+      "signature": "class ImagePreprocessor:"
+    },
+    {
+      "name": "__init__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "start_line": 21,
+      "end_line": 22,
+      "signature": "def __init__(self, split: str = \"val\") -> None:"
+    },
+    {
+      "name": "__call__",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "start_line": 24,
+      "end_line": 27,
+      "signature": "def __call__(self, image_path: Path) -> torch.Tensor:"
+    },
+    {
+      "name": "from_pil",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "start_line": 29,
+      "end_line": 31,
+      "signature": "def from_pil(self, image: Image.Image) -> torch.Tensor:"
+    },
+    {
+      "name": "get_controller",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "start_line": 33,
+      "end_line": 38,
+      "signature": "def get_controller() -> InferenceController:"
+    },
+    {
+      "name": "health",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "start_line": 42,
+      "end_line": 43,
+      "signature": "def health() -> Dict[str, str]:"
+    },
+    {
+      "name": "infer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "start_line": 47,
+      "end_line": 72,
+      "signature": "async def infer(file: UploadFile = File(...)) -> Dict[str, Any]:"
+    },
+    {
+      "name": "render_reports",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\reports.py",
+      "start_line": 12,
+      "end_line": 26,
+      "signature": "def render_reports(report_dir: Path = Path(\"reports\")) -> None:"
+    },
+    {
+      "name": "get_controller",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 37,
+      "end_line": 38,
+      "signature": "def get_controller() -> InferenceController:"
+    },
+    {
+      "name": "apply_custom_css",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 41,
+      "end_line": 251,
+      "signature": "def apply_custom_css() -> None:"
+    },
+    {
+      "name": "render_header",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 254,
+      "end_line": 274,
+      "signature": "def render_header() -> None:"
+    },
+    {
+      "name": "render_confidence_gauge",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 277,
+      "end_line": 290,
+      "signature": "def render_confidence_gauge(confidence: float, accent: str) -> None:"
+    },
+    {
+      "name": "build_status_badge",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 293,
+      "end_line": 296,
+      "signature": "def build_status_badge(label: str) -> Tuple[str, str]:"
+    },
+    {
+      "name": "render_probability_card",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 299,
+      "end_line": 312,
+      "signature": "def render_probability_card(label: str, value: float, color: str) -> None:"
+    },
+    {
+      "name": "render_actions",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 315,
+      "end_line": 350,
+      "signature": "def render_actions(report_text: str, explanation_path: Path) -> None:"
+    },
+    {
+      "name": "render_disclaimer",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 353,
+      "end_line": 366,
+      "signature": "def render_disclaimer() -> None:"
+    },
+    {
+      "name": "main",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "start_line": 369,
+      "end_line": 597,
+      "signature": "def main() -> None:"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 42,
+      "end_line": 42,
+      "signature": "(value: number) => `${(value * 100).toFixed(1)}%`"
+    },
+    {
+      "name": "App",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 44,
+      "end_line": 532,
+      "signature": "function App() {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 44,
+      "end_line": 44,
+      "signature": "function"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 54,
+      "end_line": 64,
+      "signature": "() => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 66,
+      "end_line": 76,
+      "signature": "(file: File, objectUrl: string) => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 68,
+      "end_line": 74,
+      "signature": "() => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 78,
+      "end_line": 111,
+      "signature": "async (file: File) => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 114,
+      "end_line": 121,
+      "signature": "async (file: File) => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 126,
+      "end_line": 131,
+      "signature": "async (event: ChangeEvent<HTMLInputElement>) => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 136,
+      "end_line": 142,
+      "signature": "async (event: DragEvent<HTMLDivElement>) => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 146,
+      "end_line": 148,
+      "signature": "(event: DragEvent<HTMLDivElement>) => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 150,
+      "end_line": 153,
+      "signature": "() => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 155,
+      "end_line": 160,
+      "signature": "() => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 162,
+      "end_line": 182,
+      "signature": "() => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 184,
+      "end_line": 194,
+      "signature": "() => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 191,
+      "end_line": 193,
+      "signature": "() => {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 247,
+      "end_line": 254,
+      "signature": "(format) => ("
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 269,
+      "end_line": 269,
+      "signature": "() => fileInputRef.current?.click()"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 422,
+      "end_line": 422,
+      "signature": "() => setShowHeatmap((prev) => !prev)"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "start_line": 422,
+      "end_line": 422,
+      "signature": "(prev) => !prev"
+    },
+    {
+      "name": "AnimatedBadge",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\AnimatedBadge.tsx",
+      "start_line": 8,
+      "end_line": 29,
+      "signature": "function AnimatedBadge({ status }: AnimatedBadgeProps) {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\AnimatedBadge.tsx",
+      "start_line": 8,
+      "end_line": 8,
+      "signature": "function"
+    },
+    {
+      "name": "ConfidenceGauge",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\ConfidenceGauge.tsx",
+      "start_line": 9,
+      "end_line": 60,
+      "signature": "function ConfidenceGauge({ confidence, status }: ConfidenceGaugeProps) {"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\ConfidenceGauge.tsx",
+      "start_line": 9,
+      "end_line": 9,
+      "signature": "function"
+    },
+    {
+      "name": "<anonymous>",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\ConfidenceGauge.tsx",
+      "start_line": 14,
+      "end_line": 20,
+      "signature": "() => {"
+    },
+    {
+      "name": "test_inference_controller_requires_checkpoint",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_inference.py",
+      "start_line": 12,
+      "end_line": 15,
+      "signature": "def test_inference_controller_requires_checkpoint(tmp_path):"
+    },
+    {
+      "name": "test_build_transforms_train_output_shape",
+      "file_path": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_transforms.py",
+      "start_line": 13,
+      "end_line": 17,
+      "signature": "def test_build_transforms_train_output_shape():"
+    }
+  ],
+  "edges": [
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\__init__.py",
+      "target": "importlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "target": "omegaconf",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\loader.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\config\\__init__.py",
+      "target": ".loader",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "target": "app.config",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "target": "app.data",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "target": "app.models",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "target": "app.services",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "target": "app.utils.logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\evaluation_controller.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "PIL",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "app.config",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "app.models",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "app.services.explainability",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "app.utils",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\inference_controller.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "target": "app.config",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "target": "app.data",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "target": "app.models",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "target": "app.services.trainer",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "target": "app.utils.logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\training_controller.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\__init__.py",
+      "target": ".evaluation_controller",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\__init__.py",
+      "target": ".inference_controller",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\controllers\\__init__.py",
+      "target": ".training_controller",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "target": "torch.utils.data",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "target": "torchvision",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\dataset.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "target": "albumentations",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "target": "albumentations.pytorch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\transforms.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\__init__.py",
+      "target": ".dataset",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\data\\__init__.py",
+      "target": ".transforms",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "target": "abc",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\base_model.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "target": "app.models.base_model",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "target": "torchvision",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\resnet_pneumonia.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\__init__.py",
+      "target": ".base_model",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\models\\__init__.py",
+      "target": ".resnet_pneumonia",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "app.models.base_model",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "app.utils.logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "sklearn.metrics",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "torch.utils.data",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\evaluation.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "PIL",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "app.models.base_model",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "app.utils.logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "base64",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "io",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "pytorch_grad_cam",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "pytorch_grad_cam.utils.image",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\explainability.py",
+      "target": "uuid",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "app.models.base_model",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "app.utils.logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "app.utils.metrics",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "dataclasses",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "torch.utils.data",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "tqdm",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\trainer.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\__init__.py",
+      "target": ".evaluation",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\__init__.py",
+      "target": ".explainability",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\services\\__init__.py",
+      "target": ".trainer",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\logger.py",
+      "target": "logging",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\logger.py",
+      "target": "rich.console",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\logger.py",
+      "target": "rich.logging",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\metrics.py",
+      "target": "collections",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\metrics.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "target": "PIL",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "target": "app.data.transforms",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\preprocessing.py",
+      "target": "torch",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\__init__.py",
+      "target": ".logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\__init__.py",
+      "target": ".metrics",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\utils\\__init__.py",
+      "target": ".preprocessing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "PIL",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "app.controllers.inference_controller",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "app.utils.logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "fastapi",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "fastapi.middleware.cors",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "io",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "time",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\api.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\reports.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "PIL",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "app.controllers",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "app.utils.logger",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "base64",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "io",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "time",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\app\\views\\ui.py",
+      "target": "typing",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\vite.config.ts",
+      "target": "@vitejs/plugin-react",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\vite.config.ts",
+      "target": "vite",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "target": "./components/AnimatedBadge",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "target": "./components/ConfidenceGauge",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "target": "framer-motion",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "target": "lucide-react",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\App.tsx",
+      "target": "react",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\main.tsx",
+      "target": "./App",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\main.tsx",
+      "target": "./index.css",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\main.tsx",
+      "target": "react",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\main.tsx",
+      "target": "react-dom/client",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\AnimatedBadge.tsx",
+      "target": "framer-motion",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\AnimatedBadge.tsx",
+      "target": "lucide-react",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\ConfidenceGauge.tsx",
+      "target": "framer-motion",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\frontend\\src\\components\\ConfidenceGauge.tsx",
+      "target": "react",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\conftest.py",
+      "target": "pathlib",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\conftest.py",
+      "target": "sys",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_inference.py",
+      "target": "app.controllers.inference_controller",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_inference.py",
+      "target": "pytest",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_transforms.py",
+      "target": "PIL",
+      "relation": "imports"
+    },
+    {
+      "source": "C:\\Users\\nagar\\OneDrive\\Documents\\vscode projects\\CodeMentor\\.codeatlas\\repos\\828f7470-2583-40d1-9811-1666e2be87bd\\tests\\test_transforms.py",
+      "target": "app.data.transforms",
+      "relation": "imports"
+    }
+  ]
+}
