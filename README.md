@@ -24,6 +24,11 @@ Streamlit UI:
 streamlit run codeatlas/views/streamlit_app.py
 ```
 
+Website Link:
+```
+https://codemento-ai.vercel.app/
+```
+
 ## Configuration
 Environment variables:
 - `CODEATLAS_EMBEDDING_PROVIDER` = `sentence` or `hash`
