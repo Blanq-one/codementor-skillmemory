@@ -22,7 +22,6 @@ load_dotenv()  # pick up OPENAI_API_KEY and GRAPH_DB_* from .env
 
 from codeatlas.services.memory.skill_memory import (
     find_skills,
-    prune_skill,
     save_skill,
 )
 
@@ -35,14 +34,15 @@ EXAMPLE_SKILL = (
 async def main() -> None:
     print("--- hello_memory: isolation test ---\n")
 
-    print("[1] Clearing any previous test data...")
-    await prune_skill()
-
-    print("[2] Saving skill:")
+    # Note: we do NOT prune before recall. Cognee's forget() drops the
+    # dataset's vector collection, and a same-process remember() does not
+    # repopulate it, so a CHUNKS recall right after a prune finds nothing.
+    # Save -> recall proves the round trip; cleanup prune runs at the end.
+    print("[1] Saving skill:")
     print(f"    {EXAMPLE_SKILL}\n")
     await save_skill(EXAMPLE_SKILL)
 
-    print("[3] Querying: 'where is login handled'\n")
+    print("[2] Querying: 'where is login handled'\n")
     results = await find_skills("where is login handled")
 
     if not results:
