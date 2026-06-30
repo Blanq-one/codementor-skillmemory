@@ -7,6 +7,7 @@ from codeatlas.services.agents.retrieval_agent import RetrievalAgent
 from codeatlas.services.agents.repo_analyst_agent import RepoAnalystAgent
 from codeatlas.services.agents.coding_mentor_agent import CodingMentorAgent
 from codeatlas.services.agents.memory_agent import MemoryAgent
+from codeatlas.services.agents.librarian_agent import LibrarianAgent
 from codeatlas.services.dependency.import_graph_builder import ImportGraphBuilder
 from codeatlas.services.ingestion.git_loader import GitRepositoryLoader
 from codeatlas.services.memory.in_memory_store import InMemoryStore
@@ -88,17 +89,19 @@ def get_memory_store() -> MemoryStore:
 
 @lru_cache
 def get_agent_orchestrator() -> AgentOrchestrator:
+    config = get_config()
     llm = get_llm_provider().get_chat_model()
     answer_service = get_answer_service()
     repo_state_store = get_repo_state_store()
     memory_store = get_memory_store()
-    
+
     planner = PlannerAgent(llm=llm)
     retrieval_agent = RetrievalAgent(answer_service=answer_service)
     analyst_agent = RepoAnalystAgent(state_store=repo_state_store, llm=llm)
     mentor_agent = CodingMentorAgent(answer_service=answer_service, llm=llm)
     memory_agent = MemoryAgent(memory_store=memory_store)
-    
+    librarian = LibrarianAgent(llm=llm)
+
     return AgentOrchestrator(
         planner=planner,
         retrieval_agent=retrieval_agent,
@@ -106,6 +109,8 @@ def get_agent_orchestrator() -> AgentOrchestrator:
         mentor_agent=mentor_agent,
         memory_agent=memory_agent,
         memory_store=memory_store,
+        librarian=librarian,
+        librarian_enabled=config.librarian_enabled,
     )
 
 
