@@ -181,12 +181,15 @@ class AgentOrchestrator:
                 "Instructions:\n"
                 "- Use ONLY candidate skills whose method genuinely fits the "
                 "current repo and question; adapt them into your steps.\n"
-                "- Explicitly IGNORE candidates that do not fit this repo's "
-                "domain. Do not force an irrelevant method onto this repo.\n"
+                "- Do not force an irrelevant method onto this repo.\n"
                 "- In your JSON output, in addition to \"steps\", include "
                 "\"skills_used\" (list of candidate numbers you applied) and "
                 "\"skills_ignored\" (list of {\"n\": number, \"reason\": short "
-                "reason for skipping}).\n\n"
+                "reason}).\n"
+                "- EVERY candidate number listed above MUST appear in exactly "
+                "one of those two arrays. Never omit a candidate: if it does "
+                "not fit this repo's domain, put it in skills_ignored with a "
+                "concrete reason.\n\n"
                 f"User question: {question}"
             )
         else:
