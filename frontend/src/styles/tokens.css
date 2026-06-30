@@ -1,0 +1,52 @@
+/* Semantic tokens. One [data-theme] flip swaps base/surface/text/border and
+   re-derives the accents. Nothing in the app hardcodes a color. */
+
+:root,
+[data-theme='dark'] {
+  --bg-base: #0a0c10;
+  --bg-surface: #141820;
+  --bg-raised: #1a2029; /* derived: skill cards / inputs */
+  --border-hairline: #232a36;
+  --text-primary: #e8edf4;
+  --text-muted: #8a95a5;
+
+  --accent-recall: #4fd8eb; /* skill actively used */
+  --accent-ignored: #c8956a; /* skill recalled but rejected */
+
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg-base: #fbfbfd;
+  --bg-surface: #ffffff;
+  --bg-raised: #f4f6f9;
+  --border-hairline: #e4e7ec;
+  --text-primary: #0a0c10;
+  --text-muted: #5a6573;
+
+  --accent-recall: #0fb5ce;
+  --accent-ignored: #b07a4a;
+
+  color-scheme: light;
+}
+
+:root {
+  --font-display: 'Inter Tight', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* 4px spacing scale */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --tap: 150ms cubic-bezier(0.2, 0, 0, 1);
+}

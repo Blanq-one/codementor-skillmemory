@@ -10,7 +10,7 @@ from langgraph.graph import END, StateGraph
 
 from codeatlas.services.agents.interfaces import Agent
 from codeatlas.services.agents.librarian_agent import LibrarianAgent
-from codeatlas.services.agents.types import AnswerResult, GenerateResult
+from codeatlas.services.agents.types import AnswerResult, GenerateResult, SkillView
 from codeatlas.models.agent_memory import AgentMemory
 from codeatlas.services.memory.interfaces import MemoryStore
 from codeatlas.services.memory.skill_memory import find_skills, save_skill
@@ -34,6 +34,14 @@ def _run_async(coro):
 _SOURCE_RE = re.compile(r"^\[Learned from repo:\s*(.*?)\]\s*(.*)$", re.DOTALL)
 
 
+def _split_source(text: str) -> tuple[str, str]:
+    """Separate a stored skill into (source_repo, method)."""
+    match = _SOURCE_RE.match(text.strip())
+    if match:
+        return match.group(1).strip(), match.group(2).strip()
+    return "unknown", text.strip()
+
+
 def _format_candidates(texts) -> str:
     """Render recalled skill texts as a numbered candidate list with sources.
 
@@ -44,11 +52,7 @@ def _format_candidates(texts) -> str:
         return ""
     lines: List[str] = []
     for i, text in enumerate(texts, 1):
-        match = _SOURCE_RE.match(text.strip())
-        if match:
-            source, method = match.group(1).strip(), match.group(2).strip()
-        else:
-            source, method = "unknown", text.strip()
+        source, method = _split_source(text)
         lines.append(f"{i}. (source repo: {source}) {method}")
     return "\n".join(lines)
 
@@ -63,6 +67,7 @@ class OrchestratorState(TypedDict):
     final_answer: str
     validated: bool
     recalled_skills: str
+    recalled_candidates: List[str]
     skill_saved: bool
 
 class AgentOrchestrator:
@@ -103,19 +108,61 @@ class AgentOrchestrator:
             "final_answer": "",
             "validated": False,
             "recalled_skills": "",
+            "recalled_candidates": [],
             "skill_saved": False,
         }
         final_state = self._graph.invoke(initial_state)
-        
+
         # Construct the final result from the state
         reasoning = [f"Plan: {json.dumps(final_state.get('plan', {}))}"]
         reasoning.extend(final_state.get("results", []))
-        
+
         return AnswerResult(
             answer=final_state.get("final_answer", "No answer generated."),
             citations=[], # Citations execution logic to be refined
             reasoning_steps=reasoning,
+            skills=self._build_skill_views(final_state),
         )
+
+    def _build_skill_views(self, final_state: OrchestratorState) -> List[SkillView]:
+        """Map recalled candidates + the planner's selection into client-facing
+        skill views: each is either 'used' (cyan) or 'ignored' (amber, with a
+        rejection reason where the planner gave one)."""
+        candidates = final_state.get("recalled_candidates", []) or []
+        if not candidates:
+            return []
+        plan = final_state.get("plan", {}) or {}
+
+        used: set[int] = set()
+        for n in plan.get("skills_used", []) or []:
+            try:
+                used.add(int(n))
+            except (TypeError, ValueError):
+                continue
+
+        ignored_reasons: Dict[int, str] = {}
+        for item in plan.get("skills_ignored", []) or []:
+            if isinstance(item, dict) and item.get("n") is not None:
+                try:
+                    ignored_reasons[int(item["n"])] = (item.get("reason") or "").strip()
+                except (TypeError, ValueError):
+                    continue
+
+        views: List[SkillView] = []
+        for i, text in enumerate(candidates, 1):
+            source, method = _split_source(text)
+            if i in used:
+                views.append(SkillView(method=method, source_repo=source, state="used"))
+            else:
+                views.append(
+                    SkillView(
+                        method=method,
+                        source_repo=source,
+                        state="ignored",
+                        reason=ignored_reasons.get(i) or None,
+                    )
+                )
+        return views
         
     def _build_graph(self):
         graph = StateGraph(OrchestratorState)
@@ -304,6 +351,7 @@ class AgentOrchestrator:
     def _librarian_recall_node(self, state: OrchestratorState) -> OrchestratorState:
         """Recall transferable skills learned on other repos before planning."""
         question = state["question"]
+        results: List[str] = []
         try:
             results = _run_async(find_skills(question, top_k=self._recall_top_k))
             skills_text = _format_candidates(results)
@@ -314,7 +362,7 @@ class AgentOrchestrator:
         except Exception as exc:
             self._logger.warning("Skill recall failed: %s", exc)
             skills_text = ""
-        return {**state, "recalled_skills": skills_text}
+        return {**state, "recalled_skills": skills_text, "recalled_candidates": results}
 
     def _librarian_save_node(self, state: OrchestratorState) -> OrchestratorState:
         """Distill the final answer into a transferable method and save it."""

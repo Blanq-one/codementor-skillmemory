@@ -17,4 +17,5 @@ def ask(
         answer=result.answer,
         citations=result.citations,
         reasoning_steps=result.reasoning_steps,
+        skills=[vars(skill) for skill in result.skills],
     )
