@@ -1,4 +1,11 @@
 services:
+  falkordb:
+    image: falkordb/falkordb:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - falkordb_data:/data
+
   codeatlas:
     build: .
     ports:
@@ -7,5 +14,13 @@ services:
       CODEATLAS_AUTH_ENABLED: "false"
       CODEATLAS_EMBEDDING_PROVIDER: "sentence"
       CODEATLAS_LLM_PROVIDER: "openai"
+      GRAPH_DB_URL: falkordb
+      GRAPH_DB_PORT: "6379"
+      ENABLE_BACKEND_ACCESS_CONTROL: "false"
     volumes:
       - ./.codeatlas:/app/.codeatlas
+    depends_on:
+      - falkordb
+
+volumes:
+  falkordb_data:

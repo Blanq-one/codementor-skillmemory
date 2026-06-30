@@ -14,3 +14,5 @@ langchain-community==0.2.12
 pytest==8.3.2
 prometheus-client==0.20.0
 python-dotenv==1.0.1
+cognee==1.2.2
+cognee-community-hybrid-adapter-falkor==0.3.1
