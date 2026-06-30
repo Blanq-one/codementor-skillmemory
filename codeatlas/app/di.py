@@ -111,6 +111,7 @@ def get_agent_orchestrator() -> AgentOrchestrator:
         memory_store=memory_store,
         librarian=librarian,
         librarian_enabled=config.librarian_enabled,
+        librarian_broaden=config.librarian_broaden,
     )
 
 

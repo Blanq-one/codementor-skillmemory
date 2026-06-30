@@ -76,6 +76,7 @@ class AgentOrchestrator:
         memory_store: MemoryStore | None = None,
         librarian: LibrarianAgent | None = None,
         librarian_enabled: bool = False,
+        librarian_broaden: bool = False,
     ) -> None:
         self._planner = planner
         self._retrieval_agent = retrieval_agent
@@ -85,6 +86,9 @@ class AgentOrchestrator:
         self._memory_store = memory_store
         self._librarian = librarian
         self._librarian_enabled = librarian_enabled and librarian is not None
+        # Clean config recalls a tight top_k; broaden mode widens it so more
+        # candidates surface and the planner must discriminate explicitly.
+        self._recall_top_k = 25 if librarian_broaden else 5
         self._logger = logging.getLogger(__name__)
 
         self._graph = self._build_graph()
@@ -298,7 +302,7 @@ class AgentOrchestrator:
         """Recall transferable skills learned on other repos before planning."""
         question = state["question"]
         try:
-            results = _run_async(find_skills(question))
+            results = _run_async(find_skills(question, top_k=self._recall_top_k))
             skills_text = _format_candidates(results)
             if skills_text:
                 self._logger.info(

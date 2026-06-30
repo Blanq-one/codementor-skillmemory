@@ -123,9 +123,12 @@ async def find_skills(
     """
     await _configure()
     search_type = SearchType.GRAPH_COMPLETION if graph_completion else SearchType.CHUNKS
+    # Scope recall to the skills dataset only: never pull in other datasets
+    # (e.g. dev-notes) as skill candidates.
     results = await cognee.recall(
         query_text=query,
         query_type=search_type,
+        datasets=[dataset],
         top_k=top_k,
     )
     return [text for text in (_result_text(r) for r in results) if text]
