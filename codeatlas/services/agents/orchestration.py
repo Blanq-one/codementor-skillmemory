@@ -283,7 +283,9 @@ class AgentOrchestrator:
             results = _run_async(find_skills(question))
             skills_text = _format_skills(results)
             if skills_text:
-                self._logger.info("Recalled prior skills for planning.")
+                self._logger.info(
+                    "Recalled prior skills for planning:\n%s", skills_text
+                )
         except Exception as exc:
             self._logger.warning("Skill recall failed: %s", exc)
             skills_text = ""
