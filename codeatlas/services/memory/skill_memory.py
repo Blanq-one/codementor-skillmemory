@@ -97,14 +97,38 @@ async def save_skill(
     await cognee.remember(payload, dataset_name=dataset)
 
 
-async def find_skills(query: str, dataset: str = SKILL_DATASET, top_k: int = 5) -> list:
-    """Retrieve skills relevant to a query. Maps to cognee.recall()."""
+def _result_text(result) -> str:
+    """Pull the raw text out of a cognee recall result item."""
+    text = getattr(result, "text", None)
+    if text is None and isinstance(result, dict):
+        text = result.get("text")
+    return str(text).strip() if text is not None else ""
+
+
+async def find_skills(
+    query: str,
+    dataset: str = SKILL_DATASET,
+    top_k: int = 5,
+    graph_completion: bool = False,
+) -> list[str]:
+    """Retrieve skills relevant to a query. Maps to cognee.recall().
+
+    Default uses SearchType.CHUNKS: returns up to top_k discrete skill texts
+    with their "[Learned from repo: ...]" provenance tags intact, so the caller
+    can present them as distinct, attributable candidates.
+
+    Set graph_completion=True to instead get a single synthesized
+    GRAPH_COMPLETION answer (one blended blob, provenance tags lost) for
+    comparison.
+    """
     await _configure()
-    return await cognee.recall(
+    search_type = SearchType.GRAPH_COMPLETION if graph_completion else SearchType.CHUNKS
+    results = await cognee.recall(
         query_text=query,
-        query_type=SearchType.GRAPH_COMPLETION,
+        query_type=search_type,
         top_k=top_k,
     )
+    return [text for text in (_result_text(r) for r in results) if text]
 
 
 async def consolidate(dataset: str = SKILL_DATASET) -> None:

@@ -1,6 +1,7 @@
 import asyncio
 import json
 import logging
+import re
 from concurrent.futures import ThreadPoolExecutor
 from typing import TypedDict, Annotated, List, Dict, Any
 from datetime import datetime
@@ -30,18 +31,25 @@ def _run_async(coro):
         return pool.submit(lambda: asyncio.run(coro)).result()
 
 
-def _format_skills(results) -> str:
-    """Flatten find_skills() results into a bullet list of skill texts."""
-    if not results:
+_SOURCE_RE = re.compile(r"^\[Learned from repo:\s*(.*?)\]\s*(.*)$", re.DOTALL)
+
+
+def _format_candidates(texts) -> str:
+    """Render recalled skill texts as a numbered candidate list with sources.
+
+    Each candidate keeps its provenance visible so the planner can judge
+    relevance and we can see which it used vs ignored.
+    """
+    if not texts:
         return ""
     lines: List[str] = []
-    for r in results:
-        text = getattr(r, "text", None)
-        if text is None and isinstance(r, dict):
-            text = r.get("text")
-        text = str(text if text is not None else r).strip()
-        if text:
-            lines.append(f"- {text}")
+    for i, text in enumerate(texts, 1):
+        match = _SOURCE_RE.match(text.strip())
+        if match:
+            source, method = match.group(1).strip(), match.group(2).strip()
+        else:
+            source, method = "unknown", text.strip()
+        lines.append(f"{i}. (source repo: {source}) {method}")
     return "\n".join(lines)
 
 
@@ -162,9 +170,19 @@ class AgentOrchestrator:
         recalled = state.get("recalled_skills", "")
         if recalled:
             planner_input = (
-                "Prior learned skills from other repos. These are reusable methods, "
-                "not facts about this repo. Adapt them when planning:\n"
+                "CANDIDATE skills recalled from memory, learned on OTHER repos. "
+                "Each is numbered and labelled with its source repo. They are "
+                "reusable methods, not facts about the current repo:\n"
                 f"{recalled}\n\n"
+                "Instructions:\n"
+                "- Use ONLY candidate skills whose method genuinely fits the "
+                "current repo and question; adapt them into your steps.\n"
+                "- Explicitly IGNORE candidates that do not fit this repo's "
+                "domain. Do not force an irrelevant method onto this repo.\n"
+                "- In your JSON output, in addition to \"steps\", include "
+                "\"skills_used\" (list of candidate numbers you applied) and "
+                "\"skills_ignored\" (list of {\"n\": number, \"reason\": short "
+                "reason for skipping}).\n\n"
                 f"User question: {question}"
             )
         else:
@@ -281,10 +299,10 @@ class AgentOrchestrator:
         question = state["question"]
         try:
             results = _run_async(find_skills(question))
-            skills_text = _format_skills(results)
+            skills_text = _format_candidates(results)
             if skills_text:
                 self._logger.info(
-                    "Recalled prior skills for planning:\n%s", skills_text
+                    "Recalled candidate skills for planning:\n%s", skills_text
                 )
         except Exception as exc:
             self._logger.warning("Skill recall failed: %s", exc)
