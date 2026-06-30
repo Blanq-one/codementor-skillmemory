@@ -4,18 +4,32 @@ Public API: save_skill, find_skills, consolidate, prune_skill.
 """
 from __future__ import annotations
 
+import logging
 import os
+
+# Cognee resolves its access-control / multi-tenant posture at import time.
+# The FalkorDB hybrid handler is single-user only, so multi-user access
+# control must be off BEFORE cognee is imported. This module is the single
+# point of cognee contact, so setting it here is sufficient and authoritative.
+# Harmless for the embedded backend too.
+os.environ.setdefault("ENABLE_BACKEND_ACCESS_CONTROL", "false")
 
 import cognee
 from cognee import SearchType
 
+logger = logging.getLogger(__name__)
+
 SKILL_DATASET = "skills"
 
+# Embedded fallback that Cognee uses when no graph backend is configured.
+_EMBEDDED_BACKEND = "embedded fallback (LanceDB + Kuzu)"
+
 _configured = False
+active_backend = "unconfigured"
 
 
 async def _configure() -> None:
-    global _configured
+    global _configured, active_backend
     if _configured:
         return
 
@@ -26,6 +40,9 @@ async def _configure() -> None:
         try:
             import cognee_community_hybrid_adapter_falkor.register  # noqa: F401
             from cognee import config as cognee_config
+
+            # Note: ENABLE_BACKEND_ACCESS_CONTROL is set at module top, before
+            # cognee is imported, because cognee reads it at import time.
             cognee_config.set_vector_db_config({
                 "vector_db_provider": "falkor",
                 "vector_db_url": graph_url,
@@ -36,8 +53,23 @@ async def _configure() -> None:
                 "graph_database_url": graph_url,
                 "graph_database_port": int(graph_port),
             })
+            active_backend = f"FalkorDB (hybrid) at {graph_url}:{graph_port}"
         except ImportError:
-            pass  # FalkorDB adapter not installed; fall through to defaults
+            # GRAPH_DB_URL is set but the adapter is missing. Do not silently
+            # pretend FalkorDB is active -- make the degraded state visible.
+            active_backend = (
+                f"{_EMBEDDED_BACKEND} -- GRAPH_DB_URL is set but "
+                "cognee_community_hybrid_adapter_falkor is not installed"
+            )
+            logger.warning(
+                "FalkorDB requested (GRAPH_DB_URL=%s) but the hybrid adapter is "
+                "not installed; falling back to the embedded store.",
+                graph_url,
+            )
+    else:
+        active_backend = (
+            f"{_EMBEDDED_BACKEND} -- GRAPH_DB_URL/GRAPH_DB_PORT not set"
+        )
 
     # Cognee uses its own config cache; bridge from OPENAI_API_KEY if present.
     openai_key = os.getenv("OPENAI_API_KEY")
@@ -45,6 +77,7 @@ async def _configure() -> None:
         from cognee import config as cognee_config
         cognee_config.set_llm_api_key(openai_key)
 
+    logger.info("skill_memory backend active: %s", active_backend)
     _configured = True
 
 
