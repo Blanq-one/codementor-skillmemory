@@ -13,6 +13,7 @@ class AppConfig:
     llm_temperature: float
     api_key: str | None
     auth_enabled: bool
+    librarian_enabled: bool
 
 
 def load_config() -> AppConfig:
@@ -26,4 +27,6 @@ def load_config() -> AppConfig:
         llm_temperature=float(os.getenv("CODEATLAS_LLM_TEMPERATURE", "0.2")),
         api_key=os.getenv("CODEATLAS_API_KEY"),
         auth_enabled=os.getenv("CODEATLAS_AUTH_ENABLED", "false").lower() == "true",
+        librarian_enabled=os.getenv("CODEATLAS_LIBRARIAN_ENABLED", "true").lower()
+        == "true",
     )
