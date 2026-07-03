@@ -3,6 +3,7 @@ import { AppShell } from "./shell/AppShell"
 import { ShellTopBar } from "./shell/ShellTopBar"
 import type { NavId } from "./shell/Sidebar"
 import { ChatPanel } from "./panels/ChatPanel"
+import { LiveChatPanel } from "./panels/LiveChatPanel"
 import { DashboardPanel } from "./panels/DashboardPanel"
 import { Placeholder } from "./panels/Placeholder"
 import { Chip, GlowDot, HudLabel } from "./ui"
@@ -22,7 +23,7 @@ function LiveIndicator({ label }: { label: string }) {
  * the chat and dashboard (skills/repos are stubs). Each view supplies its own
  * ShellTopBar title + context. Nothing is wired to a backend yet.
  */
-export function RedesignApp({ initial = "chat" }: { initial?: NavId }) {
+export function RedesignApp({ initial = "chat", live = false }: { initial?: NavId; live?: boolean }) {
   const [active, setActive] = useState<NavId>(initial)
 
   let topBar: ReactNode
@@ -40,11 +41,11 @@ export function RedesignApp({ initial = "chat" }: { initial?: NavId }) {
               <LiveIndicator label="recalling" />
             </>
           }
-          eyebrow={`session · ${SESSION.id}`}
+          eyebrow={live ? "session · live" : `session · ${SESSION.id}`}
           title="Agent chat"
         />
       )
-      content = <ChatPanel />
+      content = live ? <LiveChatPanel /> : <ChatPanel />
       break
     case "dashboard":
       topBar = (

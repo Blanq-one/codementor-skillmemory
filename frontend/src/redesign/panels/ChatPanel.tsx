@@ -17,7 +17,15 @@ import { PromptBar } from "../PromptBar"
 import { AgentToolCard } from "../AgentToolCard"
 import { StreamingResponse } from "../StreamingResponse"
 import { useAgentRun } from "../useAgentRun"
-import { ANSWER_CODE, ANSWER_MD, CHAIN_STEPS, QUESTION, REASONING_MD, RUN_TOOLS } from "../session"
+import {
+  ANSWER_CODE,
+  ANSWER_MD,
+  CHAIN_STEPS,
+  QUESTION,
+  REASONING_MD,
+  RECALLED_SKILLS,
+  RUN_TOOLS,
+} from "../session"
 
 const AmbientGraph = lazy(() => import("../AmbientGraph"))
 
@@ -103,7 +111,7 @@ export function ChatPanel() {
 
       <div className="hidden lg:block">
         <div className="sticky top-[72px]">
-          <RecallRail revealed={run.recalled} />
+          <RecallRail revealed={run.recalled} skills={RECALLED_SKILLS} />
         </div>
       </div>
     </div>

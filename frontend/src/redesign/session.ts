@@ -12,7 +12,8 @@ export type RecalledSkill = {
   method: string
   sourceRepo: string
   state: RecallState
-  confidence: number // 0..1
+  confidence?: number // 0..1 — only the scripted mock sets this; the live
+  // backend has no similarity score to surface, so the Rail spine is hidden.
   note?: string
 }
 

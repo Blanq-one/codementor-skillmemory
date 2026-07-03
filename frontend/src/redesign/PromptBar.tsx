@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { motion } from "motion/react"
+import type { ChatStatus } from "ai"
 import {
   PromptInput,
   PromptInputTextarea,
@@ -11,11 +12,22 @@ import { Surface, HudLabel } from "./ui"
 import { SESSION } from "./session"
 
 /**
- * Premium prompt bar: glassy, cyan focus glow, mono context chips. Standalone
- * (no backend) — submit just flashes an acknowledgement.
+ * Premium prompt bar: glassy, cyan focus glow, mono context chips.
+ * - Scripted mode (no `onSubmit`): submit just flashes an acknowledgement.
+ * - Live mode (`onSubmit` provided): forwards the trimmed text; `status`
+ *   reflects the in-flight request so the submit button shows a spinner.
  */
-export function PromptBar() {
+export function PromptBar({
+  onSubmit,
+  status,
+  placeholder = "Ask about acme/payments-api — the agent will recall what it learned elsewhere",
+}: {
+  onSubmit?: (text: string) => void
+  status?: ChatStatus
+  placeholder?: string
+} = {}) {
   const [sentAt, setSentAt] = useState<string | null>(null)
+  const busy = status === "submitted" || status === "streaming"
 
   return (
     <motion.div
@@ -28,15 +40,17 @@ export function PromptBar() {
         variant="strong"
       >
         <PromptInput
-          onSubmit={(_m, e) => {
+          onSubmit={(m, e) => {
             e.preventDefault()
-            setSentAt(new Date().toLocaleTimeString())
+            const text = (m.text ?? "").trim()
+            if (onSubmit) {
+              if (text && !busy) onSubmit(text)
+            } else {
+              setSentAt(new Date().toLocaleTimeString())
+            }
           }}
         >
-          <PromptInputTextarea
-            className="bg-transparent"
-            placeholder="Ask about acme/payments-api — the agent will recall what it learned elsewhere"
-          />
+          <PromptInputTextarea className="bg-transparent" placeholder={placeholder} />
           <PromptInputFooter className="border-0">
             <PromptInputTools>
               <HudLabel className="rounded border border-border px-2 py-1">{SESSION.stack}</HudLabel>
@@ -44,13 +58,19 @@ export function PromptBar() {
                 memory · {SESSION.reposSeen} repos
               </HudLabel>
             </PromptInputTools>
-            <PromptInputSubmit />
+            <PromptInputSubmit status={status} />
           </PromptInputFooter>
         </PromptInput>
       </Surface>
       <div className="mt-2 flex items-center justify-between px-1">
         <HudLabel>
-          {sentAt ? `sent ${sentAt} · not wired to backend` : "enter to send · shift+enter for newline"}
+          {onSubmit
+            ? busy
+              ? "working — the agent is recalling and reasoning"
+              : "enter to send · shift+enter for newline"
+            : sentAt
+              ? `sent ${sentAt} · not wired to backend`
+              : "enter to send · shift+enter for newline"}
         </HudLabel>
         <span className="sk-mono text-[10px] text-muted-foreground">{SESSION.id}</span>
       </div>
