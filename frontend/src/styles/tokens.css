@@ -12,6 +12,7 @@
 
   --accent-recall: #4fd8eb; /* skill actively used */
   --accent-ignored: #c8956a; /* skill recalled but rejected */
+  --accent-danger: #e5606a; /* destructive / error */
 
   color-scheme: dark;
 }
@@ -26,6 +27,7 @@
 
   --accent-recall: #0fb5ce;
   --accent-ignored: #b07a4a;
+  --accent-danger: #c8323c; /* destructive / error */
 
   color-scheme: light;
 }

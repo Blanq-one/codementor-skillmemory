@@ -1,0 +1,72 @@
+/* shadcn / Tailwind v4 bridge.
+   COEXIST mode: Tailwind utilities + theme only, NO Preflight, so the existing
+   hand-built reset and components in app.css render exactly as before.
+   Every shadcn token points at the semantic tokens in tokens.css, so the app's
+   [data-theme] dark/light toggle drives shadcn, Tremor, and AI Elements too. */
+
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+/* NOTE: tailwindcss/preflight.css is intentionally NOT imported. */
+@import "tw-animate-css";
+
+/* shadcn's dark variant follows the app's [data-theme] attribute, not `.dark`. */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* Bridge: shadcn tokens -> existing semantic tokens (see src/styles/tokens.css).
+   One block is enough: these vars resolve against tokens.css, which already
+   flips its own values under [data-theme='light']. */
+:root {
+  --background: var(--bg-base);
+  --foreground: var(--text-primary);
+  --card: var(--bg-surface);
+  --card-foreground: var(--text-primary);
+  --popover: var(--bg-surface);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--accent-recall);
+  --primary-foreground: var(--bg-base);
+  --secondary: var(--bg-raised);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--bg-raised);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--bg-raised);
+  --accent-foreground: var(--text-primary);
+
+  --destructive: var(--accent-danger);
+  --destructive-foreground: var(--bg-base);
+
+  --border: var(--border-hairline);
+  --input: var(--border-hairline);
+  --ring: var(--accent-recall);
+  --radius: var(--radius-md);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
+}
