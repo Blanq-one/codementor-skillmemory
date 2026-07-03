@@ -19,11 +19,12 @@ if (devPath === '/_demo') {
       </React.StrictMode>,
     )
   })
-} else if (devPath === '/_chat') {
-  void import('./redesign/ChatView').then(({ ChatView }) => {
+} else if (devPath === '/_chat' || devPath === '/_dashboard' || devPath === '/_app') {
+  const initial = devPath === '/_dashboard' ? 'dashboard' : 'chat'
+  void import('./redesign/RedesignApp').then(({ RedesignApp }) => {
     root.render(
       <React.StrictMode>
-        <ChatView />
+        <RedesignApp initial={initial} />
       </React.StrictMode>,
     )
   })
