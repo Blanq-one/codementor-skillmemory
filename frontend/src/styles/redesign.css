@@ -1,0 +1,178 @@
+/* ============================================================================
+   Redesign layer  —  "instrument panel for a memory that learns to read code"
+   ----------------------------------------------------------------------------
+   Additive only. Every value derives from tokens.css, so the whole redesign
+   flows through the [data-theme] toggle. No global Preflight is enabled and
+   tokens.css / app.css are not touched. The prose reset here is SCOPED to
+   .sk-prose (not a global element reset).
+   ============================================================================ */
+
+:root {
+  /* Depth base: a hair deeper than --bg-base so the radial gradient reads as
+     a lit instrument surface, not flat black. */
+  --sk-void: #06080b;
+
+  /* Glass surfaces, recomputed from --bg-surface (which flips with theme). */
+  --sk-glass: color-mix(in srgb, var(--bg-surface) 66%, transparent);
+  --sk-glass-strong: color-mix(in srgb, var(--bg-surface) 86%, transparent);
+
+  /* Cyan signal glow. Tight ring + short falloff = phosphor, not neon haze. */
+  --sk-glow-recall:
+    0 0 0 1px color-mix(in srgb, var(--accent-recall) 45%, transparent),
+    0 0 22px -6px color-mix(in srgb, var(--accent-recall) 60%, transparent);
+  --sk-glow-soft: 0 0 30px -10px color-mix(in srgb, var(--accent-recall) 45%, transparent);
+  --sk-glow-amber: 0 0 0 1px color-mix(in srgb, var(--accent-ignored) 45%, transparent);
+  --sk-glow-danger: 0 0 0 1px color-mix(in srgb, var(--accent-danger) 50%, transparent);
+
+  --sk-radius-lg: 12px;
+  --sk-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sk-dur: 260ms;
+}
+
+[data-theme='light'] {
+  --sk-void: #e9edf3; /* light depth base */
+  --sk-glass: color-mix(in srgb, var(--bg-surface) 72%, transparent);
+  --sk-glass-strong: color-mix(in srgb, var(--bg-surface) 92%, transparent);
+}
+
+/* ---------- App surface: lit depth, not flat ---------- */
+.sk-app {
+  min-height: 100vh;
+  color: var(--text-primary);
+  background:
+    radial-gradient(
+      130% 90% at 50% -12%,
+      color-mix(in srgb, var(--bg-surface) 55%, var(--sk-void)) 0%,
+      var(--sk-void) 62%
+    );
+  /* faint coordinate field, extremely low contrast */
+  background-color: var(--sk-void);
+  position: relative;
+}
+.sk-app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--border-hairline) 40%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--border-hairline) 40%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(120% 80% at 50% 0%, black 0%, transparent 70%);
+  opacity: 0.35;
+}
+
+/* ---------- Surface treatments ---------- */
+.sk-glass {
+  background: var(--sk-glass);
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid var(--border-hairline);
+}
+.sk-glass-strong {
+  background: var(--sk-glass-strong);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--border-hairline);
+}
+.sk-hairline { border: 1px solid var(--border-hairline); }
+.sk-glow-recall { box-shadow: var(--sk-glow-recall); }
+.sk-glow-soft { box-shadow: var(--sk-glow-soft); }
+
+/* Interactive focus ring, cyan, meets contrast without lowering text contrast. */
+.sk-focus:focus-within {
+  border-color: color-mix(in srgb, var(--accent-recall) 65%, var(--border-hairline));
+  box-shadow: var(--sk-glow-soft);
+}
+
+/* ---------- HUD typography ---------- */
+.sk-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.sk-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+.sk-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* Thin animated scan line used on running tool cards. */
+.sk-scanline {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--accent-recall) 90%, transparent),
+    transparent
+  );
+  opacity: 0.9;
+}
+
+/* Blinking caret for streaming text. */
+.sk-caret {
+  display: inline-block;
+  width: 0.5ch;
+  height: 1em;
+  margin-left: 1px;
+  translate: 0 0.12em;
+  background: var(--accent-recall);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--accent-recall) 70%, transparent);
+  animation: sk-blink 1s steps(2, start) infinite;
+}
+@keyframes sk-blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+
+/* ============================================================================
+   Scoped prose reset (pulled forward from step 4).
+   Fixes the flagged markdown gaps ONLY inside .sk-prose. Preflight stays off
+   globally; this is a local, intentional typographic scale for agent answers.
+   ============================================================================ */
+.sk-prose { font-size: 14px; line-height: 1.65; color: var(--text-primary); }
+.sk-prose > :first-child { margin-top: 0; }
+.sk-prose > :last-child { margin-bottom: 0; }
+.sk-prose p { margin: 0 0 0.75em; }
+.sk-prose h1, .sk-prose h2, .sk-prose h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 1.2em 0 0.5em;
+}
+.sk-prose h1 { font-size: 1.35em; }
+.sk-prose h2 { font-size: 1.18em; }
+.sk-prose h3 { font-size: 1.05em; }
+.sk-prose ul, .sk-prose ol { margin: 0 0 0.75em; padding-left: 1.35em; }
+.sk-prose ul { list-style: disc; }
+.sk-prose ol { list-style: decimal; }
+.sk-prose li { margin: 0.2em 0; }
+.sk-prose li::marker { color: var(--text-muted); }
+.sk-prose strong { color: var(--text-primary); font-weight: 600; }
+.sk-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  padding: 0.12em 0.4em;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent-recall) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-recall) 22%, transparent);
+  color: color-mix(in srgb, var(--accent-recall) 40%, var(--text-primary));
+}
+.sk-prose pre { margin: 0 0 0.75em; }
+.sk-prose pre code { background: none; border: 0; padding: 0; }
+.sk-prose a {
+  color: var(--accent-recall);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Reduced motion: kill ambient + streaming animation ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .sk-caret { animation: none; opacity: 1; }
+}
