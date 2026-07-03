@@ -1,5 +1,4 @@
-import { lazy, Suspense, type ReactNode } from "react"
-import { AnimatePresence, motion } from "motion/react"
+import { lazy, Suspense } from "react"
 
 import "../styles/redesign.css"
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -14,6 +13,7 @@ import {
 } from "@/components/ai-elements/chain-of-thought"
 import { CodeBlock } from "@/components/ai-elements/code-block"
 
+import { Reveal, Eyebrow } from "./ui"
 import { RedesignTopBar } from "./RedesignTopBar"
 import { RecallRail } from "./RecallRail"
 import { PromptBar } from "./PromptBar"
@@ -31,21 +31,6 @@ import {
 
 // Ambient backdrop is code-split so it never blocks first paint.
 const AmbientGraph = lazy(() => import("./AmbientGraph"))
-
-const block = {
-  initial: { opacity: 0, y: 12 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const },
-}
-
-function Eyebrow({ children }: { children: ReactNode }) {
-  return (
-    <div className="mb-2 flex items-center gap-2">
-      <span className="sk-label">{children}</span>
-      <span className="h-px flex-1 bg-border" />
-    </div>
-  )
-}
 
 export function ChatView() {
   const run = useAgentRun()
@@ -77,60 +62,54 @@ export function ChatView() {
                   <Message from="assistant">
                     <MessageContent className="w-full max-w-full gap-4">
                       {/* Reasoning: the recalled + adapted skill */}
-                      <motion.div {...block}>
+                      <Reveal>
                         <Reasoning defaultOpen>
                           <ReasoningTrigger />
                           <ReasoningContent>{REASONING_MD}</ReasoningContent>
                         </Reasoning>
-                      </motion.div>
+                      </Reveal>
 
                       {/* Execution pipeline */}
-                      <AnimatePresence>
-                        {showTools && (
-                          <motion.div {...block} key="tools">
-                            <Eyebrow>Execution</Eyebrow>
-                            <div className="flex flex-col gap-2">
-                              {RUN_TOOLS.map((t) => (
-                                <AgentToolCard key={t.id} state={run.toolState[t.id]} tool={t} />
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      {showTools && (
+                        <Reveal>
+                          <Eyebrow>Execution</Eyebrow>
+                          <div className="flex flex-col gap-2">
+                            {RUN_TOOLS.map((t) => (
+                              <AgentToolCard key={t.id} state={run.toolState[t.id]} tool={t} />
+                            ))}
+                          </div>
+                        </Reveal>
+                      )}
 
                       {/* Trace */}
-                      <AnimatePresence>
-                        {showTrace && (
-                          <motion.div {...block} key="trace">
-                            <ChainOfThought defaultOpen>
-                              <ChainOfThoughtHeader>Trace</ChainOfThoughtHeader>
-                              <ChainOfThoughtContent>
-                                {CHAIN_STEPS.map((s, i) => (
-                                  <ChainOfThoughtStep
-                                    description={s.meta}
-                                    key={i}
-                                    label={s.label}
-                                    status={s.status}
-                                  />
-                                ))}
-                              </ChainOfThoughtContent>
-                            </ChainOfThought>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      {showTrace && (
+                        <Reveal>
+                          <ChainOfThought defaultOpen>
+                            <ChainOfThoughtHeader>Trace</ChainOfThoughtHeader>
+                            <ChainOfThoughtContent>
+                              {CHAIN_STEPS.map((s, i) => (
+                                <ChainOfThoughtStep
+                                  description={s.meta}
+                                  key={i}
+                                  label={s.label}
+                                  status={s.status}
+                                />
+                              ))}
+                            </ChainOfThoughtContent>
+                          </ChainOfThought>
+                        </Reveal>
+                      )}
 
                       {/* Answer */}
-                      <AnimatePresence>
-                        {showAnswer && (
-                          <motion.div {...block} key="answer">
-                            <Eyebrow>Answer</Eyebrow>
-                            <StreamingResponse active={run.phase === "answering"} text={ANSWER_MD} />
-                            <div className="mt-3">
-                              <CodeBlock code={ANSWER_CODE} language="python" showLineNumbers />
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      {showAnswer && (
+                        <Reveal>
+                          <Eyebrow>Answer</Eyebrow>
+                          <StreamingResponse active={run.phase === "answering"} text={ANSWER_MD} />
+                          <div className="mt-3">
+                            <CodeBlock code={ANSWER_CODE} language="python" showLineNumbers />
+                          </div>
+                        </Reveal>
+                      )}
                     </MessageContent>
                   </Message>
                 </ConversationContent>

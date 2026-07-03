@@ -1,6 +1,7 @@
 import { motion } from "motion/react"
 import type { ToolUIPart } from "ai"
 import { Tool, ToolHeader, ToolContent, ToolInput, ToolOutput } from "@/components/ai-elements/tool"
+import { Surface, ScanLine, Reveal, HudLabel } from "./ui"
 import type { RunTool } from "./session"
 
 /**
@@ -8,9 +9,8 @@ import type { RunTool } from "./session"
  * starts, runs a cyan scan line while executing, and glows until it settles.
  * A pending tool is a slim queued stub, so the pipeline visibly fills in.
  *
- * Layering note: the glow lives on the OUTER element (no overflow) so the
- * box-shadow can escape; the scan line lives in an INNER overflow-hidden box
- * so it's clipped to the card.
+ * Layering: the glow lives on the OUTER Reveal (no overflow) so the box-shadow
+ * can escape; the ScanLine lives in the INNER overflow-hidden Surface.
  */
 export function AgentToolCard({ tool, state }: { tool: RunTool; state: ToolUIPart["state"] }) {
   const pending = state === "input-streaming"
@@ -25,7 +25,7 @@ export function AgentToolCard({ tool, state }: { tool: RunTool; state: ToolUIPar
         layout
       >
         <span className="size-1.5 rounded-full bg-[var(--text-muted)]" />
-        <span className="sk-label">queued</span>
+        <HudLabel>queued</HudLabel>
         <span className="sk-mono text-muted-foreground text-xs">{name}</span>
       </motion.div>
     )
@@ -38,15 +38,14 @@ export function AgentToolCard({ tool, state }: { tool: RunTool; state: ToolUIPar
       : "var(--border-hairline)"
 
   return (
-    <motion.div
-      animate={{ opacity: 1, y: 0 }}
+    <Reveal
       className="rounded-lg"
-      initial={{ opacity: 0, y: 10 }}
+      duration={0.32}
       layout
       style={{ boxShadow: running ? "var(--sk-glow-soft)" : undefined }}
-      transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+      y={10}
     >
-      <div className="relative overflow-hidden rounded-lg sk-glass" style={{ borderColor: accent }}>
+      <Surface className="relative overflow-hidden rounded-lg" style={{ borderColor: accent }}>
         <Tool className="border-0 bg-transparent" defaultOpen>
           <ToolHeader state={state} type={tool.type} />
           <ToolContent>
@@ -58,15 +57,8 @@ export function AgentToolCard({ tool, state }: { tool: RunTool; state: ToolUIPar
           </ToolContent>
         </Tool>
 
-        {running && (
-          <motion.div
-            animate={{ top: ["0%", "100%"] }}
-            className="sk-scanline"
-            style={{ top: 0 }}
-            transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-          />
-        )}
-      </div>
-    </motion.div>
+        {running && <ScanLine />}
+      </Surface>
+    </Reveal>
   )
 }

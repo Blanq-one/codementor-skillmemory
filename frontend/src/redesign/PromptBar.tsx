@@ -7,6 +7,7 @@ import {
   PromptInputTools,
   PromptInputSubmit,
 } from "@/components/ai-elements/prompt-input"
+import { Surface, HudLabel } from "./ui"
 import { SESSION } from "./session"
 
 /**
@@ -22,7 +23,10 @@ export function PromptBar() {
       initial={{ opacity: 0, y: 16 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="sk-glass-strong sk-focus rounded-[var(--sk-radius-lg)] px-2 pt-1 pb-2 transition-shadow">
+      <Surface
+        className="sk-focus rounded-[var(--sk-radius-lg)] px-2 pt-1 pb-2 transition-shadow"
+        variant="strong"
+      >
         <PromptInput
           onSubmit={(_m, e) => {
             e.preventDefault()
@@ -35,19 +39,19 @@ export function PromptBar() {
           />
           <PromptInputFooter className="border-0">
             <PromptInputTools>
-              <span className="sk-label rounded border border-border px-2 py-1">{SESSION.stack}</span>
-              <span className="sk-label rounded border border-border px-2 py-1">
+              <HudLabel className="rounded border border-border px-2 py-1">{SESSION.stack}</HudLabel>
+              <HudLabel className="rounded border border-border px-2 py-1">
                 memory · {SESSION.reposSeen} repos
-              </span>
+              </HudLabel>
             </PromptInputTools>
             <PromptInputSubmit />
           </PromptInputFooter>
         </PromptInput>
-      </div>
+      </Surface>
       <div className="mt-2 flex items-center justify-between px-1">
-        <span className="sk-label">
+        <HudLabel>
           {sentAt ? `sent ${sentAt} · not wired to backend` : "enter to send · shift+enter for newline"}
-        </span>
+        </HudLabel>
         <span className="sk-mono text-[10px] text-muted-foreground">{SESSION.id}</span>
       </div>
     </motion.div>

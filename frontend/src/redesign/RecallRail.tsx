@@ -1,20 +1,16 @@
 import { AnimatePresence, motion } from "motion/react"
-import { RECALLED_SKILLS, type RecalledSkill, type RecallState } from "./session"
+import { HudLabel, RECALL_STATE } from "./ui"
+import { RECALLED_SKILLS, type RecalledSkill } from "./session"
 
 /**
  * THE SIGNATURE. Most chat products hide retrieval; this exposes it. Each
  * recalled skill "surfaces" from memory with a scan-in as the agent works,
  * labeled with the repo it was learned on and whether it transferred.
+ * (Kept as motion.li directly rather than <Surface> because it needs to be an
+ * animated list item; still uses the shared sk-glass treatment + primitives.)
  */
-
-const STATE_META: Record<RecallState, { label: string; color: string }> = {
-  used: { label: "applied", color: "var(--accent-recall)" },
-  adapted: { label: "adapted", color: "var(--accent-ignored)" },
-  ignored: { label: "not transferable", color: "var(--text-muted)" },
-}
-
 function RecallCard({ skill, index }: { skill: RecalledSkill; index: number }) {
-  const meta = STATE_META[skill.state]
+  const meta = RECALL_STATE[skill.state]
   const ignored = skill.state === "ignored"
 
   return (
@@ -35,9 +31,9 @@ function RecallCard({ skill, index }: { skill: RecalledSkill; index: number }) {
       />
 
       <div className="mb-2 flex items-center justify-between gap-2">
-        <span className="sk-label" style={{ color: meta.color }}>
+        <HudLabel tone={meta.color}>
           {String(index + 1).padStart(2, "0")} · {meta.label}
-        </span>
+        </HudLabel>
         <span className="sk-mono text-[10px] text-muted-foreground">{Math.round(skill.confidence * 100)}%</span>
       </div>
 
@@ -80,7 +76,7 @@ export function RecallRail({ revealed }: { revealed: number }) {
   return (
     <aside className="flex h-full flex-col">
       <div className="mb-3 flex items-baseline justify-between">
-        <span className="sk-label">Recall · this query</span>
+        <HudLabel>Recall · this query</HudLabel>
         <span className="sk-mono text-[11px] text-muted-foreground">
           {revealed}/{RECALLED_SKILLS.length}
         </span>

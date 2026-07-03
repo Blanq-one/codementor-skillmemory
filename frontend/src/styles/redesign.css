@@ -117,6 +117,10 @@
   opacity: 0.9;
 }
 
+/* Breathing status dot (GlowDot pulse). */
+.sk-pulse { animation: sk-pulse 2.4s var(--sk-ease) infinite; }
+@keyframes sk-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
 /* Blinking caret for streaming text. */
 .sk-caret {
   display: inline-block;
@@ -175,4 +179,5 @@
 /* ---------- Reduced motion: kill ambient + streaming animation ---------- */
 @media (prefers-reduced-motion: reduce) {
   .sk-caret { animation: none; opacity: 1; }
+  .sk-pulse { animation: none; }
 }

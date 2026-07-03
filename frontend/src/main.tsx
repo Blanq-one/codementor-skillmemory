@@ -27,6 +27,14 @@ if (devPath === '/_demo') {
       </React.StrictMode>,
     )
   })
+} else if (devPath === '/_shell') {
+  void import('./redesign/shell/ShellPreview').then(({ ShellPreview }) => {
+    root.render(
+      <React.StrictMode>
+        <ShellPreview />
+      </React.StrictMode>,
+    )
+  })
 } else {
   root.render(
     <React.StrictMode>
