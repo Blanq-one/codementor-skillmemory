@@ -39,6 +39,14 @@
   --input: var(--border-hairline);
   --ring: var(--accent-recall);
   --radius: var(--radius-md);
+
+  /* Chart series palette, derived from the app's accents so charts follow the
+     [data-theme] toggle. Used by shadcn charts via ChartConfig color:var(--chart-N). */
+  --chart-1: var(--accent-recall);
+  --chart-2: var(--accent-danger);
+  --chart-3: var(--accent-ignored);
+  --chart-4: color-mix(in srgb, var(--accent-recall) 55%, var(--text-muted));
+  --chart-5: color-mix(in srgb, var(--accent-ignored) 60%, var(--text-muted));
 }
 
 @theme inline {
@@ -61,6 +69,11 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
 
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);
