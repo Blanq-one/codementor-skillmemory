@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
 import { motion } from "motion/react"
 import type { ChatStatus } from "ai"
 import {
@@ -21,10 +21,12 @@ export function PromptBar({
   onSubmit,
   status,
   placeholder = "Ask about acme/payments-api — the agent will recall what it learned elsewhere",
+  chips,
 }: {
   onSubmit?: (text: string) => void
   status?: ChatStatus
   placeholder?: string
+  chips?: ReactNode
 } = {}) {
   const [sentAt, setSentAt] = useState<string | null>(null)
   const busy = status === "submitted" || status === "streaming"
@@ -53,10 +55,14 @@ export function PromptBar({
           <PromptInputTextarea className="bg-transparent" placeholder={placeholder} />
           <PromptInputFooter className="border-0">
             <PromptInputTools>
-              <HudLabel className="rounded border border-border px-2 py-1">{SESSION.stack}</HudLabel>
-              <HudLabel className="rounded border border-border px-2 py-1">
-                memory · {SESSION.reposSeen} repos
-              </HudLabel>
+              {chips ?? (
+                <>
+                  <HudLabel className="rounded border border-border px-2 py-1">{SESSION.stack}</HudLabel>
+                  <HudLabel className="rounded border border-border px-2 py-1">
+                    memory · {SESSION.reposSeen} repos
+                  </HudLabel>
+                </>
+              )}
             </PromptInputTools>
             <PromptInputSubmit status={status} />
           </PromptInputFooter>

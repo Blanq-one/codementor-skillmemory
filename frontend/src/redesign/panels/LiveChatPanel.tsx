@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from "react"
+import { lazy, Suspense, useRef, useState } from "react"
 import type { ChatStatus } from "ai"
 
 import { Conversation, ConversationContent } from "@/components/ai-elements/conversation"
@@ -10,7 +10,7 @@ import {
   ChainOfThoughtStep,
 } from "@/components/ai-elements/chain-of-thought"
 import { Shimmer } from "@/components/ai-elements/shimmer"
-import { askQuestion, fetchRepos, repoLabel } from "@/api/client"
+import { askQuestion, repoLabel } from "@/api/client"
 
 import { Reveal, Eyebrow, Surface, HudLabel, GlowDot, ScanLine } from "../ui"
 import { RecallRail } from "../RecallRail"
@@ -87,27 +87,19 @@ function DoneRun({ run, streaming }: { run: AdaptedRun; streaming: boolean }) {
   )
 }
 
-/** Live chat wired to the real /ask backend via the existing api/client. */
-export function LiveChatPanel() {
-  const [repos, setRepos] = useState<string[]>([])
-  const [repo, setRepo] = useState("")
-  const [reposLoaded, setReposLoaded] = useState(false)
+/** Live chat wired to the real /ask backend. Repo state is owned by RedesignApp
+ *  so the top bar and this panel show the same real repo. */
+export function LiveChatPanel({
+  repos,
+  repo,
+  reposLoaded,
+}: {
+  repos: string[]
+  repo: string
+  reposLoaded: boolean
+}) {
   const [turns, setTurns] = useState<Turn[]>([])
   const idRef = useRef(0)
-
-  useEffect(() => {
-    const ctrl = new AbortController()
-    fetchRepos(ctrl.signal)
-      .then((rs) => {
-        setRepos(rs)
-        setRepo((prev) => prev || rs[0] || "")
-      })
-      .catch(() => {
-        /* surfaced via reposLoaded + empty repos */
-      })
-      .finally(() => setReposLoaded(true))
-    return () => ctrl.abort()
-  }, [])
 
   const submit = (text: string) => {
     const id = ++idRef.current
@@ -193,7 +185,20 @@ export function LiveChatPanel() {
           </Conversation>
 
           <div className="pt-4">
-            <PromptBar onSubmit={submit} status={status} />
+            <PromptBar
+              chips={
+                <>
+                  <HudLabel className="rounded border border-border px-2 py-1">
+                    {reposLoaded ? (repo ? repoLabel(repo) : "no repo") : "loading…"}
+                  </HudLabel>
+                  <HudLabel className="rounded border border-border px-2 py-1">
+                    memory · {repos.length} {repos.length === 1 ? "repo" : "repos"}
+                  </HudLabel>
+                </>
+              }
+              onSubmit={submit}
+              status={status}
+            />
           </div>
         </div>
       </section>

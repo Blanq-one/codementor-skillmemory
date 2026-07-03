@@ -23,6 +23,9 @@ const PULSE: [number, number] = [1, 4]
 function AmbientGraphBase() {
   const reduced = useReducedMotion()
   const [a, b] = PULSE
+  // Guard against a bad index so cx/cy are always numeric (never undefined).
+  const pa = NODES[a] ?? [0, 0, 1]
+  const pb = NODES[b] ?? [0, 0, 1]
 
   return (
     <svg
@@ -64,16 +67,19 @@ function AmbientGraphBase() {
         <line
           stroke="var(--accent-recall)"
           strokeWidth={0.25}
-          x1={NODES[a][0]}
-          x2={NODES[b][0]}
-          y1={NODES[a][1]}
-          y2={NODES[b][1]}
+          x1={pa[0]}
+          x2={pb[0]}
+          y1={pa[1]}
+          y2={pb[1]}
           style={{ opacity: 0.5 }}
         />
         {!reduced && (
           <motion.circle
-            animate={{ cx: [NODES[a][0], NODES[b][0]], cy: [NODES[a][1], NODES[b][1]], opacity: [0, 1, 0] }}
+            animate={{ cx: [pa[0], pb[0]], cy: [pa[1], pb[1]], opacity: [0, 1, 0] }}
+            cx={pa[0]}
+            cy={pa[1]}
             fill="var(--accent-recall)"
+            initial={{ cx: pa[0], cy: pa[1], opacity: 0 }}
             r={0.9}
             style={{ filter: "drop-shadow(0 0 2px var(--accent-recall))" }}
             transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 2.6, ease: "easeInOut" }}

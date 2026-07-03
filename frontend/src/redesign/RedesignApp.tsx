@@ -1,4 +1,5 @@
-import { useState, type ReactNode } from "react"
+import { useEffect, useState, type ReactNode } from "react"
+import { fetchRepos, repoLabel } from "@/api/client"
 import { AppShell } from "./shell/AppShell"
 import { ShellTopBar } from "./shell/ShellTopBar"
 import type { NavId } from "./shell/Sidebar"
@@ -26,6 +27,28 @@ function LiveIndicator({ label }: { label: string }) {
 export function RedesignApp({ initial = "chat", live = false }: { initial?: NavId; live?: boolean }) {
   const [active, setActive] = useState<NavId>(initial)
 
+  // Repo list is only needed (and only fetched) in live mode; shared between
+  // the top bar and the live chat panel so they show the same real repo.
+  const [repos, setRepos] = useState<string[]>([])
+  const [repo, setRepo] = useState("")
+  const [reposLoaded, setReposLoaded] = useState(false)
+  useEffect(() => {
+    if (!live) return
+    const ctrl = new AbortController()
+    fetchRepos(ctrl.signal)
+      .then((rs) => {
+        setRepos(rs)
+        setRepo((prev) => prev || rs[0] || "")
+      })
+      .catch(() => {
+        /* surfaced via reposLoaded + empty repos in the panel */
+      })
+      .finally(() => setReposLoaded(true))
+    return () => ctrl.abort()
+  }, [live])
+
+  const repoChipText = reposLoaded ? (repo ? repoLabel(repo) : "none ingested") : "loading…"
+
   let topBar: ReactNode
   let content: ReactNode
 
@@ -36,7 +59,7 @@ export function RedesignApp({ initial = "chat", live = false }: { initial?: NavI
           context={
             <>
               <Chip className="hidden md:inline-flex" label="repo">
-                {SESSION.targetRepo}
+                {live ? repoChipText : SESSION.targetRepo}
               </Chip>
               <LiveIndicator label="recalling" />
             </>
@@ -45,7 +68,11 @@ export function RedesignApp({ initial = "chat", live = false }: { initial?: NavI
           title="Agent chat"
         />
       )
-      content = live ? <LiveChatPanel /> : <ChatPanel />
+      content = live ? (
+        <LiveChatPanel repo={repo} reposLoaded={reposLoaded} repos={repos} />
+      ) : (
+        <ChatPanel />
+      )
       break
     case "dashboard":
       topBar = (
