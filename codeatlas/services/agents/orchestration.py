@@ -15,6 +15,8 @@ from codeatlas.models.agent_memory import AgentMemory
 from codeatlas.services.memory.interfaces import MemoryStore
 from codeatlas.services.memory.skill_memory import find_skills, save_skill
 from codeatlas.services.memory.skill_log import append_skill
+from codeatlas.services.diagram.mermaid_builder import build_module_diagram, wants_diagram
+from codeatlas.services.state.repo_state_store import RepoStateStore
 
 
 def _run_async(coro):
@@ -84,6 +86,7 @@ class AgentOrchestrator:
         librarian_enabled: bool = False,
         librarian_broaden: bool = False,
         skill_log_dir: str | None = None,
+        state_store: RepoStateStore | None = None,
     ) -> None:
         self._planner = planner
         self._retrieval_agent = retrieval_agent
@@ -93,6 +96,7 @@ class AgentOrchestrator:
         self._memory_store = memory_store
         self._librarian = librarian
         self._skill_log_dir = skill_log_dir
+        self._state_store = state_store
         self._librarian_enabled = librarian_enabled and librarian is not None
         # Clean config recalls a tight top_k; broaden mode widens it so more
         # candidates surface and the planner must discriminate explicitly.
@@ -120,11 +124,33 @@ class AgentOrchestrator:
         reasoning = [f"Plan: {json.dumps(final_state.get('plan', {}))}"]
         reasoning.extend(final_state.get("results", []))
 
+        answer = final_state.get("final_answer", "No answer generated.")
+        answer = self._maybe_append_diagram(answer, question, repo_id)
+
         return AnswerResult(
-            answer=final_state.get("final_answer", "No answer generated."),
+            answer=answer,
             citations=[], # Citations execution logic to be refined
             reasoning_steps=reasoning,
             skills=self._build_skill_views(final_state),
+        )
+
+    def _maybe_append_diagram(self, answer: str, question: str, repo_id: str) -> str:
+        """When the question asks for a diagram, append a grounded Mermaid block
+        built from the repo's real import graph. Silent no-op if we can't build a
+        meaningful, non-empty diagram."""
+        if self._state_store is None or not wants_diagram(question):
+            return answer
+        try:
+            state = self._state_store.get(repo_id)
+            diagram = build_module_diagram(state) if state else None
+        except Exception as exc:  # never let diagramming break the answer
+            self._logger.warning("Diagram build failed: %s", exc)
+            return answer
+        if not diagram:
+            return answer
+        return (
+            f"{answer}\n\n**Repo structure — internal module dependencies:**\n\n"
+            f"```mermaid\n{diagram}\n```"
         )
 
     def _build_skill_views(self, final_state: OrchestratorState) -> List[SkillView]:

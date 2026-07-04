@@ -15,7 +15,8 @@ import { cn } from "@/lib/utils";
 import { cjk } from "@streamdown/cjk";
 import { code } from "@streamdown/code";
 import { math } from "@streamdown/math";
-// mermaid plugin intentionally omitted — no diagrams, avoids a ~2.3 MB chunk.
+import { mermaid } from "@streamdown/mermaid";
+import { MermaidCodeFallback } from "./mermaid-fallback";
 import type { UIMessage } from "ai";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import type { ComponentProps, HTMLAttributes, ReactElement } from "react";
@@ -321,7 +322,11 @@ export const MessageBranchPage = ({
 
 export type MessageResponseProps = ComponentProps<typeof Streamdown>;
 
-const streamdownPlugins = { cjk, code, math };
+const streamdownPlugins = { cjk, code, math, mermaid };
+
+// Seatbelt: any mermaid parse/render failure downgrades to plain code text
+// instead of Streamdown's red error box.
+const mermaidOptions = { errorComponent: MermaidCodeFallback };
 
 export const MessageResponse = memo(
   ({ className, ...props }: MessageResponseProps) => (
@@ -330,6 +335,7 @@ export const MessageResponse = memo(
         "size-full [&>*:first-child]:mt-0 [&>*:last-child]:mb-0",
         className
       )}
+      mermaid={mermaidOptions}
       plugins={streamdownPlugins}
       {...props}
     />
