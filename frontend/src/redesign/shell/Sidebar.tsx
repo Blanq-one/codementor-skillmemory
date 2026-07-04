@@ -74,7 +74,15 @@ function RailItem({
  * mono section header. Collapse state persists in localStorage; collapsed items
  * show hover tooltips.
  */
-export function Sidebar({ active = "chat", onNavigate }: { active?: NavId; onNavigate?: (id: NavId) => void }) {
+export function Sidebar({
+  active = "chat",
+  onNavigate,
+  onHome,
+}: {
+  active?: NavId
+  onNavigate?: (id: NavId) => void
+  onHome?: () => void
+}) {
   const [collapsed, setCollapsed] = useState(() => {
     try {
       return localStorage.getItem(STORAGE) === "1"
@@ -97,8 +105,16 @@ export function Sidebar({ active = "chat", onNavigate }: { active?: NavId; onNav
         collapsed ? "w-[64px] items-center px-2" : "w-[236px] px-3",
       )}
     >
-      {/* Brand */}
-      <div className={cn("flex items-center gap-2.5", collapsed ? "justify-center" : "px-1")}>
+      {/* Brand — clickable returns to the entry hub */}
+      <button
+        aria-label="Home"
+        className={cn(
+          "flex items-center gap-2.5 rounded-lg text-left transition-colors hover:opacity-80",
+          collapsed ? "justify-center" : "px-1",
+        )}
+        onClick={onHome}
+        type="button"
+      >
         <BrandMark size={26} />
         {!collapsed && (
           <div className="flex flex-col leading-tight">
@@ -106,7 +122,7 @@ export function Sidebar({ active = "chat", onNavigate }: { active?: NavId; onNav
             <HudLabel>code intelligence</HudLabel>
           </div>
         )}
-      </div>
+      </button>
 
       <span className={cn("my-2 h-px bg-border", collapsed ? "w-7 self-center" : "w-full")} />
       {!collapsed && <HudLabel className="mb-1 px-1">Workspace</HudLabel>}

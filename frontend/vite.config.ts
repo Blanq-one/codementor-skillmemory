@@ -17,6 +17,7 @@ export default defineConfig({
     proxy: {
       '/ask': 'http://localhost:8000',
       '/repos': 'http://localhost:8000',
+      '/analyze-repo': 'http://localhost:8000',
     },
   },
 })

@@ -13,11 +13,13 @@ import "../../styles/redesign.css"
 export function AppShell({
   active,
   onNavigate,
+  onHome,
   topBar,
   children,
 }: {
   active?: NavId
   onNavigate?: (id: NavId) => void
+  onHome?: () => void
   topBar?: ReactNode
   children: ReactNode
 }) {
@@ -25,7 +27,7 @@ export function AppShell({
     <MotionConfig reducedMotion="user">
       <TooltipProvider delayDuration={120}>
         <div className="sk-app flex min-h-screen">
-          <Sidebar active={active} onNavigate={onNavigate} />
+          <Sidebar active={active} onHome={onHome} onNavigate={onNavigate} />
           <div className="flex min-h-screen min-w-0 flex-1 flex-col">
             {topBar}
             <main className="min-h-0 flex-1">{children}</main>

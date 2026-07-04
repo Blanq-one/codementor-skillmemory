@@ -46,6 +46,34 @@ export async function askQuestion(
   }
 }
 
+export interface AnalyzeResult {
+  repository_id: string
+  file_count: number
+  dependency_edges: number
+  indexing_status: string
+}
+
+/**
+ * Kick off repo analysis. The backend blocks through clone + parse + dependency
+ * graph (can take minutes), then queues embedding/indexing as a background task
+ * and returns. So this request stays outstanding for a while by design.
+ */
+export async function analyzeRepo(repoUrl: string, signal?: AbortSignal): Promise<AnalyzeResult> {
+  const res = await fetch(`${BASE}/analyze-repo`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ repo_url: repoUrl }),
+    signal,
+  })
+  if (res.status === 422) {
+    throw new Error('That does not look like a valid repository URL.')
+  }
+  if (!res.ok) {
+    throw new Error(`Analysis failed (${res.status}). Is the backend running on :8000?`)
+  }
+  return (await res.json()) as AnalyzeResult
+}
+
 /** Short, stable label for a repo id or source tag. */
 export function repoLabel(id: string): string {
   if (!id || id === 'unknown') return 'unknown'

@@ -94,13 +94,16 @@ export function LiveChatPanel({
   repo,
   reposLoaded,
   reposError,
+  notice,
 }: {
   repos: string[]
   repo: string
   reposLoaded: boolean
   reposError?: string | null
+  notice?: string | null
 }) {
   const [turns, setTurns] = useState<Turn[]>([])
+  const [showNotice, setShowNotice] = useState(true)
   const idRef = useRef(0)
 
   const submit = (text: string) => {
@@ -139,6 +142,22 @@ export function LiveChatPanel({
         </div>
 
         <div className="relative z-10 flex min-h-0 flex-1 flex-col">
+          {notice && showNotice && (
+            <div className="mb-2 flex items-start justify-between gap-3 rounded-lg border border-[color-mix(in_srgb,var(--accent-ignored)_45%,var(--border-hairline))] sk-glass px-3 py-2">
+              <div className="flex items-start gap-2">
+                <GlowDot color="var(--accent-ignored)" />
+                <p className="m-0 text-[12px] text-muted-foreground leading-relaxed">{notice}</p>
+              </div>
+              <button
+                aria-label="Dismiss"
+                className="sk-label shrink-0 hover:text-foreground"
+                onClick={() => setShowNotice(false)}
+                type="button"
+              >
+                dismiss
+              </button>
+            </div>
+          )}
           <div className="mb-2 flex items-center gap-2 px-1">
             <HudLabel>repo</HudLabel>
             <span className="sk-mono text-[12px] text-foreground">

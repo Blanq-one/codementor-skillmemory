@@ -42,10 +42,20 @@ if (devPath === '/_demo') {
       </React.StrictMode>,
     )
   })
-} else {
+} else if (devPath === '/_legacy') {
+  // The previous UI, kept as a fallback.
   root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,
   )
+} else {
+  // Default "/" — the real product entry (redesign).
+  void import('./redesign/RootApp').then(({ RootApp }) => {
+    root.render(
+      <React.StrictMode>
+        <RootApp />
+      </React.StrictMode>,
+    )
+  })
 }
