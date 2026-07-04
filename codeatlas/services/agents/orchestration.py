@@ -13,6 +13,7 @@ from codeatlas.services.agents.librarian_agent import LibrarianAgent
 from codeatlas.services.agents.types import AnswerResult, GenerateResult, SkillView
 from codeatlas.models.agent_memory import AgentMemory
 from codeatlas.services.memory.interfaces import MemoryStore
+from codeatlas.services.memory import skill_memory
 from codeatlas.services.memory.skill_memory import find_skills, save_skill
 from codeatlas.services.memory.skill_log import append_skill
 from codeatlas.services.diagram.mermaid_builder import build_module_diagram, wants_diagram
@@ -378,20 +379,40 @@ class AgentOrchestrator:
         return self._execute_agent(self._memory_agent, state)
 
     def _librarian_recall_node(self, state: OrchestratorState) -> OrchestratorState:
-        """Recall transferable skills learned on other repos before planning."""
+        """Recall transferable skills learned on other repos before planning.
+
+        Recall is best-effort, but failures are SURFACED, not swallowed: logged
+        at ERROR with the active backend and full traceback, and added to the
+        reasoning trace so they show in the UI. (Kept non-fatal so a recall
+        hiccup doesn't take down the whole answer.)"""
         question = state["question"]
         results: List[str] = []
+        recall_note: str | None = None
         try:
             results = _run_async(find_skills(question, top_k=self._recall_top_k))
             skills_text = _format_candidates(results)
+            self._logger.info(
+                "Skill recall: backend=%s top_k=%s -> %d candidate(s)",
+                skill_memory.active_backend,
+                self._recall_top_k,
+                len(results),
+            )
             if skills_text:
-                self._logger.info(
-                    "Recalled candidate skills for planning:\n%s", skills_text
-                )
+                self._logger.info("Recalled candidate skills for planning:\n%s", skills_text)
         except Exception as exc:
-            self._logger.warning("Skill recall failed: %s", exc)
             skills_text = ""
-        return {**state, "recalled_skills": skills_text, "recalled_candidates": results}
+            self._logger.error(
+                "Skill recall FAILED (backend=%s): %s",
+                skill_memory.active_backend,
+                exc,
+                exc_info=True,
+            )
+            recall_note = f"Skill recall failed (backend={skill_memory.active_backend}): {exc}"
+
+        new_state = {**state, "recalled_skills": skills_text, "recalled_candidates": results}
+        if recall_note:
+            new_state["results"] = state.get("results", []) + [recall_note]
+        return new_state
 
     def _librarian_save_node(self, state: OrchestratorState) -> OrchestratorState:
         """Distill the final answer into a transferable method and save it."""
