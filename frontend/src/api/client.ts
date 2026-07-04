@@ -74,6 +74,20 @@ export async function analyzeRepo(repoUrl: string, signal?: AbortSignal): Promis
   return (await res.json()) as AnalyzeResult
 }
 
+export interface SkillLogItem {
+  method: string
+  source_repo: string
+  ts: number
+}
+
+/** List the transferable skills the librarian has learned (newest first). */
+export async function fetchSkills(signal?: AbortSignal): Promise<SkillLogItem[]> {
+  const res = await fetch(`${BASE}/skills`, { signal })
+  if (!res.ok) throw new Error(`Could not load the skill library (${res.status}).`)
+  const data = (await res.json()) as { skills?: SkillLogItem[] }
+  return data.skills ?? []
+}
+
 /** Short, stable label for a repo id or source tag. */
 export function repoLabel(id: string): string {
   if (!id || id === 'unknown') return 'unknown'

@@ -14,6 +14,7 @@ from codeatlas.services.agents.types import AnswerResult, GenerateResult, SkillV
 from codeatlas.models.agent_memory import AgentMemory
 from codeatlas.services.memory.interfaces import MemoryStore
 from codeatlas.services.memory.skill_memory import find_skills, save_skill
+from codeatlas.services.memory.skill_log import append_skill
 
 
 def _run_async(coro):
@@ -82,6 +83,7 @@ class AgentOrchestrator:
         librarian: LibrarianAgent | None = None,
         librarian_enabled: bool = False,
         librarian_broaden: bool = False,
+        skill_log_dir: str | None = None,
     ) -> None:
         self._planner = planner
         self._retrieval_agent = retrieval_agent
@@ -90,6 +92,7 @@ class AgentOrchestrator:
         self._memory_agent = memory_agent
         self._memory_store = memory_store
         self._librarian = librarian
+        self._skill_log_dir = skill_log_dir
         self._librarian_enabled = librarian_enabled and librarian is not None
         # Clean config recalls a tight top_k; broaden mode widens it so more
         # candidates surface and the planner must discriminate explicitly.
@@ -377,6 +380,9 @@ class AgentOrchestrator:
             method = self._librarian.distill(question, answer)
             if method:
                 _run_async(save_skill(method, source_repo=repo_id))
+                # Mirror to the JSON log that powers the Skill Library view.
+                if self._skill_log_dir:
+                    append_skill(self._skill_log_dir, method, source_repo=repo_id)
                 self._logger.info("Saved transferable skill from repo %s", repo_id)
                 note = f"Librarian: saved transferable skill -> {method}"
         except Exception as exc:

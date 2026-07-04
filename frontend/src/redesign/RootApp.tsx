@@ -17,6 +17,9 @@ const LiveChatPanel = lazy(() =>
 const DashboardPanel = lazy(() =>
   import("./panels/DashboardPanel").then((m) => ({ default: m.DashboardPanel })),
 )
+const SkillLibrary = lazy(() =>
+  import("./panels/SkillLibrary").then((m) => ({ default: m.SkillLibrary })),
+)
 
 type View = "entry" | NavId
 
@@ -128,8 +131,8 @@ export function RootApp() {
       content = <DashboardPanel />
       break
     case "skills":
-      topBar = <ShellTopBar eyebrow="workspace · skills" title="Skill library" />
-      content = <Placeholder note="Listing what the librarian has learned — building next." title="Skill library" />
+      topBar = <ShellTopBar eyebrow="workspace · memory" title="Skill library" />
+      content = <SkillLibrary />
       break
     default:
       topBar = <ShellTopBar eyebrow="workspace · repos" title="Repositories" />

@@ -112,6 +112,7 @@ def get_agent_orchestrator() -> AgentOrchestrator:
         librarian=librarian,
         librarian_enabled=config.librarian_enabled,
         librarian_broaden=config.librarian_broaden,
+        skill_log_dir=config.state_dir,
     )
 
 

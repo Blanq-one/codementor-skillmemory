@@ -12,6 +12,7 @@ from codeatlas.controllers.metrics_controller import router as metrics_router
 from codeatlas.controllers.overview_controller import router as overview_router
 from codeatlas.controllers.repos_controller import router as repos_router
 from codeatlas.controllers.search_controller import router as search_router
+from codeatlas.controllers.skills_controller import router as skills_router
 from codeatlas.utils.logging import configure_logging
 from dotenv import load_dotenv
 
@@ -46,6 +47,7 @@ def create_app() -> FastAPI:
     app.include_router(overview_router, dependencies=[auth_dependency])
     app.include_router(search_router, dependencies=[auth_dependency])
     app.include_router(generate_router, dependencies=[auth_dependency])
+    app.include_router(skills_router, dependencies=[auth_dependency])
     app.include_router(metrics_router)
 
     @app.middleware("http")

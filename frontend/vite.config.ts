@@ -18,6 +18,7 @@ export default defineConfig({
       '/ask': 'http://localhost:8000',
       '/repos': 'http://localhost:8000',
       '/analyze-repo': 'http://localhost:8000',
+      '/skills': 'http://localhost:8000',
     },
   },
 })
