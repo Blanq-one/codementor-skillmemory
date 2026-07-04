@@ -1,13 +1,14 @@
 import { lazy, Suspense, useCallback, useEffect, useState, type ReactNode } from "react"
 import { MotionConfig } from "motion/react"
 
-import { fetchRepos, repoLabel } from "@/api/client"
+import { fetchRepos } from "@/api/client"
 import { AppShell } from "./shell/AppShell"
 import { ShellTopBar } from "./shell/ShellTopBar"
 import type { NavId } from "./shell/Sidebar"
 import { EntryPage } from "./EntryPage"
+import { RepoPicker } from "./RepoPicker"
 import { Placeholder } from "./panels/Placeholder"
-import { Chip, GlowDot, HudLabel } from "./ui"
+import { GlowDot, HudLabel } from "./ui"
 
 // Heavy panels (chat pulls in streamdown/shiki) are code-split so the "/" entry
 // page stays light; they load when you enter that view.
@@ -80,6 +81,13 @@ export function RootApp() {
     setView(id)
   }
 
+  // Switch the active repo from within the chat (no reload). RootApp keys the
+  // chat panel on the repo, so this re-scopes /ask + the Recall Rail at once.
+  const selectRepo = (id: string) => {
+    setNotice(null)
+    setRepo(id)
+  }
+
   if (view === "entry") {
     return (
       <MotionConfig reducedMotion="user">
@@ -104,9 +112,13 @@ export function RootApp() {
         <ShellTopBar
           context={
             <>
-              <Chip className="hidden md:inline-flex" label="repo">
-                {reposError ? "api unreachable" : chatRepo ? repoLabel(chatRepo) : "none"}
-              </Chip>
+              <RepoPicker
+                onChange={selectRepo}
+                reposError={reposError}
+                reposLoaded={reposLoaded}
+                repos={repos}
+                value={chatRepo}
+              />
               <LiveIndicator label="recalling" />
             </>
           }
@@ -116,6 +128,7 @@ export function RootApp() {
       )
       content = (
         <LiveChatPanel
+          key={chatRepo}
           notice={notice}
           repo={chatRepo}
           reposError={reposError}
