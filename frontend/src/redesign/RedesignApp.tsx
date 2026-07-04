@@ -32,22 +32,42 @@ export function RedesignApp({ initial = "chat", live = false }: { initial?: NavI
   const [repos, setRepos] = useState<string[]>([])
   const [repo, setRepo] = useState("")
   const [reposLoaded, setReposLoaded] = useState(false)
+  const [reposError, setReposError] = useState<string | null>(null)
   useEffect(() => {
     if (!live) return
-    const ctrl = new AbortController()
-    fetchRepos(ctrl.signal)
+    // Cancel-flag pattern (not AbortController): React 18 StrictMode runs the
+    // effect twice in dev and fires cleanup between; aborting there cancels the
+    // request and, with a silent catch, left the list stuck empty. Here we
+    // simply ignore a stale resolution and surface real errors instead.
+    let cancelled = false
+    setReposLoaded(false)
+    setReposError(null)
+    fetchRepos()
       .then((rs) => {
+        if (cancelled) return
         setRepos(rs)
         setRepo((prev) => prev || rs[0] || "")
       })
-      .catch(() => {
-        /* surfaced via reposLoaded + empty repos in the panel */
+      .catch((err: unknown) => {
+        if (cancelled) return
+        setReposError(err instanceof Error ? err.message : "Could not load repositories")
+        console.error("[SkillMemory] /repos fetch failed:", err)
       })
-      .finally(() => setReposLoaded(true))
-    return () => ctrl.abort()
+      .finally(() => {
+        if (!cancelled) setReposLoaded(true)
+      })
+    return () => {
+      cancelled = true
+    }
   }, [live])
 
-  const repoChipText = reposLoaded ? (repo ? repoLabel(repo) : "none ingested") : "loading…"
+  const repoChipText = reposError
+    ? "api unreachable"
+    : reposLoaded
+      ? repo
+        ? repoLabel(repo)
+        : "none ingested"
+      : "loading…"
 
   let topBar: ReactNode
   let content: ReactNode
@@ -69,7 +89,7 @@ export function RedesignApp({ initial = "chat", live = false }: { initial?: NavI
         />
       )
       content = live ? (
-        <LiveChatPanel repo={repo} reposLoaded={reposLoaded} repos={repos} />
+        <LiveChatPanel repo={repo} reposError={reposError} reposLoaded={reposLoaded} repos={repos} />
       ) : (
         <ChatPanel />
       )

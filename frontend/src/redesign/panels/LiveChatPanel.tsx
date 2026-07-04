@@ -93,10 +93,12 @@ export function LiveChatPanel({
   repos,
   repo,
   reposLoaded,
+  reposError,
 }: {
   repos: string[]
   repo: string
   reposLoaded: boolean
+  reposError?: string | null
 }) {
   const [turns, setTurns] = useState<Turn[]>([])
   const idRef = useRef(0)
@@ -140,7 +142,7 @@ export function LiveChatPanel({
           <div className="mb-2 flex items-center gap-2 px-1">
             <HudLabel>repo</HudLabel>
             <span className="sk-mono text-[12px] text-foreground">
-              {reposLoaded ? (repo ? repoLabel(repo) : "none ingested") : "loading…"}
+              {reposError ? "api unreachable" : reposLoaded ? (repo ? repoLabel(repo) : "none ingested") : "loading…"}
             </span>
           </div>
 
@@ -148,11 +150,15 @@ export function LiveChatPanel({
             <ConversationContent className="mx-auto w-full max-w-3xl gap-5 py-2">
               {turns.length === 0 && (
                 <div className="py-10 text-center">
-                  <HudLabel className="block">live · wired to /ask</HudLabel>
+                  <HudLabel className="block" tone={reposError ? "var(--accent-danger)" : undefined}>
+                    {reposError ? "api unreachable" : "live · wired to /ask"}
+                  </HudLabel>
                   <p className="mx-auto mt-2 max-w-sm text-muted-foreground text-sm">
-                    {reposLoaded && repos.length === 0
-                      ? "No repositories ingested yet. Run POST /analyze-repo, then ask."
-                      : "Ask a question below. The agent recalls skills from prior repos as it answers."}
+                    {reposError
+                      ? `Couldn't load /repos: ${reposError}. Is the Vite dev server (proxy) running and the backend up on :8000?`
+                      : reposLoaded && repos.length === 0
+                        ? "No repositories ingested yet. Run POST /analyze-repo, then ask."
+                        : "Ask a question below. The agent recalls skills from prior repos as it answers."}
                   </p>
                 </div>
               )}
