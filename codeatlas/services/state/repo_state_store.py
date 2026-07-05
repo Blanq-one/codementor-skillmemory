@@ -79,10 +79,22 @@ class RepoStateStore:
         for path in self._base_dir.glob("*.json"):
             try:
                 payload = json.loads(path.read_text(encoding="utf-8"))
-            except json.JSONDecodeError:
+            except (json.JSONDecodeError, OSError) as exc:
+                self._logger.warning("Skipping unreadable state file %s: %s", path.name, exc)
+                continue
+            # The state dir also holds non-repo-state JSON (e.g. skills_log.json,
+            # a top-level list). Only dicts with a repo_id are repo states; skip
+            # anything else so one unrelated file can't crash the whole load.
+            if not isinstance(payload, dict):
+                self._logger.warning(
+                    "Skipping non-repo-state file %s (top-level %s, not an object)",
+                    path.name,
+                    type(payload).__name__,
+                )
                 continue
             repo_id = payload.get("repo_id")
             if not repo_id:
+                self._logger.info("Skipping state file %s (no repo_id)", path.name)
                 continue
             files = [
                 SourceFile(
