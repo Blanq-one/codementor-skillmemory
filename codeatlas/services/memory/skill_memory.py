@@ -6,6 +6,8 @@ from __future__ import annotations
 
 import logging
 import os
+import socket
+import threading
 
 # Cognee resolves its access-control / multi-tenant posture at import time.
 # The FalkorDB hybrid handler is single-user only, so multi-user access
@@ -27,6 +29,22 @@ _EMBEDDED_BACKEND = "embedded fallback (LanceDB + Kuzu)"
 _configured = False
 active_backend = "unconfigured"
 
+# The embedded graph store (Kuzu) is single-writer; the FastAPI sync endpoints
+# run each Cognee op in its own thread via asyncio.run (_run_async), so
+# concurrent /ask requests would otherwise contend for the Kuzu lock (Error 33).
+# Serialize all Cognee access process-wide. Safe because _run_async runs exactly
+# one Cognee coroutine per loop/thread (no same-loop re-entrancy).
+_cognee_lock = threading.Lock()
+
+
+def _falkor_reachable(host: str, port: str, timeout: float = 1.5) -> bool:
+    """TCP-ping FalkorDB so we don't silently configure a dead connection."""
+    try:
+        with socket.create_connection((host, int(port)), timeout=timeout):
+            return True
+    except (OSError, ValueError):
+        return False
+
 
 async def _configure() -> None:
     global _configured, active_backend
@@ -36,7 +54,21 @@ async def _configure() -> None:
     graph_url = os.getenv("GRAPH_DB_URL")
     graph_port = os.getenv("GRAPH_DB_PORT")
 
-    if graph_url and graph_port:
+    if graph_url and graph_port and not _falkor_reachable(graph_url, graph_port):
+        # Configured for FalkorDB but nothing is listening. Do NOT set the
+        # falkor config (which would make every op fail with connection-refused);
+        # leave Cognee on its embedded default and say so, loudly.
+        active_backend = (
+            f"{_EMBEDDED_BACKEND} -- FalkorDB configured ({graph_url}:{graph_port}) "
+            "but unreachable; fell back to embedded"
+        )
+        logger.warning(
+            "FalkorDB configured at %s:%s but not reachable; falling back to the "
+            "embedded store. Start FalkorDB or unset GRAPH_DB_URL to silence this.",
+            graph_url,
+            graph_port,
+        )
+    elif graph_url and graph_port:
         try:
             import cognee_community_hybrid_adapter_falkor.register  # noqa: F401
             from cognee import config as cognee_config
@@ -90,11 +122,12 @@ async def save_skill(
     embedded in the stored text so it becomes part of the knowledge graph and
     survives recall, without leaking into the transferable method itself.
     """
-    await _configure()
     payload = text
     if source_repo:
         payload = f"[Learned from repo: {source_repo}]\n{text}"
-    await cognee.remember(payload, dataset_name=dataset)
+    with _cognee_lock:
+        await _configure()
+        await cognee.remember(payload, dataset_name=dataset)
 
 
 def _result_text(result) -> str:
@@ -121,16 +154,17 @@ async def find_skills(
     GRAPH_COMPLETION answer (one blended blob, provenance tags lost) for
     comparison.
     """
-    await _configure()
     search_type = SearchType.GRAPH_COMPLETION if graph_completion else SearchType.CHUNKS
     # Scope recall to the skills dataset only: never pull in other datasets
     # (e.g. dev-notes) as skill candidates.
-    results = await cognee.recall(
-        query_text=query,
-        query_type=search_type,
-        datasets=[dataset],
-        top_k=top_k,
-    )
+    with _cognee_lock:
+        await _configure()
+        results = await cognee.recall(
+            query_text=query,
+            query_type=search_type,
+            datasets=[dataset],
+            top_k=top_k,
+        )
     return [text for text in (_result_text(r) for r in results) if text]
 
 
