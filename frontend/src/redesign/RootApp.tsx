@@ -1,161 +1,32 @@
-import { lazy, Suspense, useCallback, useEffect, useState, type ReactNode } from "react"
 import { MotionConfig } from "motion/react"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
-import { fetchRepos } from "@/api/client"
-import { AppShell } from "./shell/AppShell"
-import { ShellTopBar } from "./shell/ShellTopBar"
-import type { NavId } from "./shell/Sidebar"
-import { EntryPage } from "./EntryPage"
-import { RepoPicker } from "./RepoPicker"
-import { Placeholder } from "./panels/Placeholder"
-import { GlowDot, HudLabel } from "./ui"
-
-// Heavy panels (chat pulls in streamdown/shiki) are code-split so the "/" entry
-// page stays light; they load when you enter that view.
-const LiveChatPanel = lazy(() =>
-  import("./panels/LiveChatPanel").then((m) => ({ default: m.LiveChatPanel })),
-)
-const DashboardPanel = lazy(() =>
-  import("./panels/DashboardPanel").then((m) => ({ default: m.DashboardPanel })),
-)
-const SkillLibrary = lazy(() =>
-  import("./panels/SkillLibrary").then((m) => ({ default: m.SkillLibrary })),
-)
-
-type View = "entry" | NavId
-
-function LiveIndicator({ label }: { label: string }) {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5">
-      <GlowDot pulse />
-      <HudLabel>{label}</HudLabel>
-    </span>
-  )
-}
+import { ReposProvider } from "./repos-context"
+import { Landing } from "./Landing"
+import { Workspace } from "./Workspace"
 
 /**
- * Production root. Front door at "/" is the entry hub; selecting/adding a repo
- * drops into the live chat inside the AppShell. Sidebar navigates; the brand
- * returns home. Repo list is real (from /repos), fetched with the cancel-flag
- * pattern and visible errors. The scripted mock lives on the /_* dev routes.
+ * Production root with real URL routing:
+ *   /                  -> landing hub (add a repo / open a studied repo)
+ *   /repo/:repoId/*    -> that repo's workspace (chat / telemetry / skills)
+ *   anything else      -> redirect home
+ *
+ * Real routes mean browser back/forward and refresh land in the right place.
+ * The scripted mock still lives on the dev-only /_* routes (see main.tsx).
  */
 export function RootApp() {
-  const [view, setView] = useState<View>("entry")
-  const [repo, setRepo] = useState("")
-  const [repos, setRepos] = useState<string[]>([])
-  const [reposLoaded, setReposLoaded] = useState(false)
-  const [reposError, setReposError] = useState<string | null>(null)
-  const [notice, setNotice] = useState<string | null>(null)
-
-  const loadRepos = useCallback(() => {
-    let cancelled = false
-    setReposError(null)
-    fetchRepos()
-      .then((rs) => {
-        if (!cancelled) setRepos(rs)
-      })
-      .catch((err: unknown) => {
-        if (cancelled) return
-        setReposError(err instanceof Error ? err.message : "Could not load repositories")
-        console.error("[SkillMemory] /repos fetch failed:", err)
-      })
-      .finally(() => {
-        if (!cancelled) setReposLoaded(true)
-      })
-    return () => {
-      cancelled = true
-    }
-  }, [])
-
-  useEffect(() => loadRepos(), [loadRepos])
-
-  const openRepo = (id: string, opts?: { justAnalyzed?: boolean }) => {
-    setRepo(id)
-    setNotice(opts?.justAnalyzed ? "Indexing this repo in the background — early answers may be incomplete." : null)
-    setView("chat")
-    loadRepos() // a freshly analyzed repo should show up in browse
-  }
-
-  const navigate = (id: NavId) => {
-    setNotice(null)
-    setView(id)
-  }
-
-  // Switch the active repo from within the chat (no reload). RootApp keys the
-  // chat panel on the repo, so this re-scopes /ask + the Recall Rail at once.
-  const selectRepo = (id: string) => {
-    setNotice(null)
-    setRepo(id)
-  }
-
-  if (view === "entry") {
-    return (
-      <MotionConfig reducedMotion="user">
-        <EntryPage
-          onOpenRepo={openRepo}
-          onOpenSkills={() => setView("skills")}
-          repos={repos}
-          reposError={reposError}
-          reposLoaded={reposLoaded}
-        />
-      </MotionConfig>
-    )
-  }
-
-  const chatRepo = repo || repos[0] || ""
-  let topBar: ReactNode
-  let content: ReactNode
-
-  switch (view) {
-    case "chat":
-      topBar = (
-        <ShellTopBar
-          context={
-            <>
-              <RepoPicker
-                onChange={selectRepo}
-                reposError={reposError}
-                reposLoaded={reposLoaded}
-                repos={repos}
-                value={chatRepo}
-              />
-              <LiveIndicator label="recalling" />
-            </>
-          }
-          eyebrow="session · live"
-          title="Agent chat"
-        />
-      )
-      content = (
-        <LiveChatPanel
-          key={chatRepo}
-          notice={notice}
-          repo={chatRepo}
-          reposError={reposError}
-          reposLoaded={reposLoaded}
-          repos={repos}
-        />
-      )
-      break
-    case "dashboard":
-      topBar = (
-        <ShellTopBar context={<LiveIndicator label="live" />} eyebrow="workspace · telemetry" title="Telemetry" />
-      )
-      content = <DashboardPanel />
-      break
-    case "skills":
-      topBar = <ShellTopBar eyebrow="workspace · memory" title="Skill library" />
-      content = <SkillLibrary />
-      break
-    default:
-      topBar = <ShellTopBar eyebrow="workspace · repos" title="Repositories" />
-      content = <Placeholder note="Browse studied repos from the home hub for now." title="Repositories" />
-  }
-
   return (
-    <AppShell active={view} onHome={() => setView("entry")} onNavigate={navigate} topBar={topBar}>
-      <Suspense fallback={<div className="p-6"><HudLabel>loading…</HudLabel></div>}>{content}</Suspense>
-    </AppShell>
+    <BrowserRouter>
+      <MotionConfig reducedMotion="user">
+        <ReposProvider>
+          <Routes>
+            <Route element={<Landing />} path="/" />
+            <Route element={<Workspace />} path="/repo/:repoId/*" />
+            <Route element={<Navigate replace to="/" />} path="*" />
+          </Routes>
+        </ReposProvider>
+      </MotionConfig>
+    </BrowserRouter>
   )
 }
 
